@@ -1,0 +1,149 @@
+.main{
+  background-image: url('../images/main/main-bg.jpg') ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.main__header{
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-consultation{
+    a{
+      font-size: 20px;
+      @include f700;
+      margin-right: 31px;
+    }
+  }
+  margin-bottom: 55px;
+}
+.main__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.main__info{
+  width: 498px;
+  &-title{
+    @include f700;
+  line-height: 55px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  }
+  &-text{
+    width: 280px;
+    height: 49px;
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+  &-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 225px;
+    height: 105px;
+    background-color: #70c849;
+    margin-bottom: 37px;
+    color: #ffffff;
+    font-size: 18px;
+    .span-price{
+      width: 200px;
+      font-size: 24px;
+    }
+    .price-300{
+      margin-top: 10px;
+      @include f700;
+      display: inline-block;
+    }
+  }
+  &-payment{
+    font-size: 22px;
+    @include f700;
+    text-transform: uppercase;
+  }
+}
+.main-form{
+  margin-top: 50px;
+  .froze{
+    margin-top: 35px;
+    display: inline-block;
+    width: 250px;
+    height: 25px;
+    color: #565656;
+    font-size: 14px;
+  }
+}
+
+@media(max-width:991px){
+  .main{
+    height: auto;
+    background-position: right bottom;
+  }
+  .main__inner{
+    flex-direction: column;
+  }
+  .main__info{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    &-title{
+      margin-bottom: 20px;
+    }
+    &-text{
+      margin: 0px auto;
+      margin-bottom: 40px;
+    }
+    &-price{
+      margin-left: 27%;
+    }
+  }
+}
+@media(max-width:700px){
+  .main__header{
+    flex-direction: column;
+    &-logo{
+      margin-bottom: 20px;
+    }
+    &-consultation{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a{
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .main__info-payment {
+    color: #fff;
+  }
+}
+@media(max-width:575px){
+  .main__info {
+    width: 100%;
+    &-title{
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  .main-form{
+    width: 100%;
+  }
+}
+@media(max-width:480px){
+  .main__info {
+    &-title{
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 280px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    &-text {
+      font-size: 22px;
+    }
+    &-price{
+      margin: 0 auto;
+    }
+  }
+}

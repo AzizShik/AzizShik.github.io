@@ -1,0 +1,15 @@
+.btn{
+  box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  border: 1px solid $main;
+  background-color: #ffb504;
+  background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%);
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 21px 28px 19px 27px;
+}
+.btn:hover{
+  cursor: pointer;
+  background: lighten($main,10%);
+}
