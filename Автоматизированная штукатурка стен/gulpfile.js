@@ -9,7 +9,9 @@ let gulp = require('gulp'),
 
 
 gulp.task('scripts', function () {
-	return gulp.src(['vendor/slick/slick.js'])
+	return gulp.src([
+		'vendor/slick/slick.js',
+	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
@@ -19,6 +21,7 @@ gulp.task('style', function () {
 	return gulp.src([
 		'vendor/normalize.css',
 		'vendor/slick/slick.css',
+		'vendor/animate.min.css',
 	])
 		.pipe(concat('libs.min.css'))
 		.pipe(cssmin())
