@@ -33,5 +33,9 @@
 .form-title .modal__dialog-span{
   display: block;
 }
-
+@media(max-width:480px){
+  .form-name-box .label-name {
+    padding: 4px;
+}
+}
 

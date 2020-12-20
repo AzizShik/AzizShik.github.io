@@ -11,6 +11,7 @@ let gulp = require('gulp'),
 gulp.task('scripts', function () {
 	return gulp.src([
 		'vendor/slick/slick.js',
+		'vendor/jquery.validate.min.js',
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
