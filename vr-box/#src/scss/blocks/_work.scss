@@ -1,0 +1,135 @@
+.work{
+  @include adaptive-value('padding-top', 95, 45, 0);
+  background-image: url('../img/work/line.jpg');
+  background-repeat: no-repeat;
+  background-position: top top;
+  background-color: $secondary;
+  @include adaptive-value('padding-bottom', 115, 55, 0);
+}
+.work__inner{
+  display: flex;
+  justify-content: space-between;
+  @include adaptive-value('padding-top', 85, 45, 0);
+}
+.work__item{
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+.work__item{
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+.work__smart{
+  position: relative;
+  top: 40px;
+  right: 20px;
+}
+.work__controller{
+  position: relative;
+  top: 15px;
+  right: -10px;
+}
+.work__item-box{
+  position: relative;
+}
+.outher{
+  border-radius: 50%;
+  border: 3px solid #18a7d0;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-box{
+  margin-bottom: 60px;
+}
+.outher-1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-55%);
+  bottom: -50px;
+}
+.smart-box{
+  margin-bottom: 100px;
+}
+.outher-2{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-55%);
+  bottom: -80px;
+}
+.vr-box{
+  margin-bottom: 50px;
+}
+.outher-3{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-45%);
+  bottom: -30px;
+}
+.controller-box{
+  margin-bottom: 60px;
+}
+.outher-4{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-31%);
+  bottom: -40px;
+}
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 35px;
+  @include adaptive-value('font-size', 35, 18, 0);
+  font-weight: 700;
+  background-color: #18a7d0;
+}
+.work__text{
+  max-width: 260px;
+  @include adaptive-value('font-size', 17, 13, 0);
+}
+.smart-text{
+  margin-left: 20px;
+}
+.vr-text{
+  margin-left: 20px;
+}
+.controller-text{
+  margin-left: 25px;
+}
+@media(max-width:991px){
+  .work__inner{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .work__item{
+    max-width: none;
+    width: 50%;
+  }
+  .smart-text{
+    margin-left: 0px;
+  }
+  .vr-text{
+    margin-left: 0px;
+  }
+  .controller-text{
+    margin-left: 0px;
+  }
+  .work__text{
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+@media(max-width:575px){
+  .work__item{
+    width: 100%;
+  }
+}

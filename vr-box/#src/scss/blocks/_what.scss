@@ -1,0 +1,81 @@
+.what{
+  background: $secondary;
+  @include adaptive-value('padding-top', 100, 30, 0);
+  @include adaptive-value('padding-bottom', 70, 20, 0);
+  color: #000;
+}
+.what__inner{
+  display: flex;
+}
+.what__title{
+  span{
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 25px;
+    color: #000;
+  }
+  @include adaptive-value('margin-bottom', 33, 20, 0);
+}
+.what__text{
+  max-width: 570px;
+  width: 100%;
+  line-height: 24px;
+  @include adaptive-value('font-size', 17, 13, 0);
+  @include adaptive-value('margin-bottom', 25, 20, 0);
+}
+.what__box{
+  width: 660px;
+  display: flex;
+  justify-content: space-between;
+  @include adaptive-value('margin-bottom', 36, 20, 0);
+  &-item{
+    max-width: 300px;
+    width: 100%;
+  }
+  &-title{
+    font-weight: 500;
+    @include adaptive-value('font-size', 20, 15, 0);
+    margin-bottom: 15px;
+  }
+  &-list{
+    @include adaptive-value('font-size', 17, 13, 0);
+    min-height: 104px;
+  }
+  &-price{
+    font-weight: 500;
+    @include adaptive-value('font-size', 20, 15, 0);
+    margin-left: 5px;
+    span{
+      @include adaptive-value('font-size', 25, 18, 0);
+      color: $price;
+      margin-left: 10px;
+    }
+  }
+}
+.what__img{
+  position: relative;
+  top: 10px;
+  right: 30px;
+}
+
+@media(max-width:1200px){
+  .what__inner{
+    flex-direction: column-reverse;
+  }
+  .what__img{
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 50, 20, 0);
+    img{
+      width: 100%;
+    }
+  }
+}
+@media(max-width:767px){
+  .what__box{
+    flex-direction: column;
+    width: 90%;
+  }
+  .what__box-item{
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.quest{
+  @include adaptive-value('padding-top', 36, 20, 0);
+  @include adaptive-value('padding-bottom', 36, 20, 0);
+  text-align: center;
+}
+.quest__inner{
+  &-title{
+    margin-bottom: 10px;
+  }
+  a{
+    color: #040606;
+    @include adaptive-value('font-size', 18, 15, 0);
+    border-bottom: 5px dotted #040606;
+  }
+}
