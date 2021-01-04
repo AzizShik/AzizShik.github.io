@@ -1,0 +1,32 @@
+.btn{
+  color: #333333;
+  @include adaptive-value('font-size', 13, 11, 0);
+  font-weight: 700;
+  padding: 17px 20px;
+  border-radius: 10px;
+  background-color: #ffd200;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover{
+    background-color: darken( #ffd200, 10%)
+  }
+}
+
+.form__body-btn{
+  display: block;
+  @include adaptive-value('margin-top', 30, 20, 0);
+  padding: 25px 80px;
+  text-transform: uppercase;
+  @include adaptive-value('font-size', 16, 13, 0);
+  
+}
+.quest__form-btn{
+  @include adaptive-value('margin-top', 32, 20, 0);
+  padding: 28px 100px;
+  margin-left: -20px;
+}
+.quest__form-callback{
+  @include adaptive-value('margin-top', 32, 20, 0);
+  margin-left: 20px;
+}

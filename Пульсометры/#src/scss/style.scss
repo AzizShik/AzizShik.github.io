@@ -5,8 +5,9 @@
 @import 'title';
 @import 'libs/animate.min.scss';
 @import 'libs/slick.scss';
-
+@import 'modal';
 @import 'global';
+
 @import 'blocks/main';
 @import 'blocks/features';
 @import 'blocks/form';
@@ -14,4 +15,3 @@
 @import 'blocks/catalog';
 @import 'blocks/feedback';
 @import 'blocks/footer';
-@import 'modal';
