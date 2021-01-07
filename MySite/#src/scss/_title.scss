@@ -1,0 +1,8 @@
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  font-weight: 700;
+  @include adaptive-value('font-size', 30, 24, 0);
+  @include adaptive-value('padding-top', 45, 30, 0);
+}

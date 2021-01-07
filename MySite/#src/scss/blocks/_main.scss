@@ -1,0 +1,6 @@
+.main{  
+  background: -webkit-linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
+  background: -moz-linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
+  background: linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
+  @include adaptive-value('padding-top', 65, 35, 0);
+}
