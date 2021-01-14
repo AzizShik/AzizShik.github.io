@@ -91,6 +91,9 @@
     &:hover{
       background: linear-gradient(27deg, #c02a2a 0%, #881010 100%);
       transition: all 0.3s ease-in;
+      svg{
+        fill: rgb(211, 183, 183);
+      }
     }
   }
 }
