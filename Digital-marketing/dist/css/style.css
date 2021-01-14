@@ -4271,7 +4271,7 @@ body {
 
 .main {
   padding-top: calc(150px + 100 * ((100vw - 320px) / 1600));
-  padding-bottom: calc(500px + 400 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(500px + 375 * ((100vw - 320px) / 1600));
 }
 
 .main__inner {
@@ -4280,7 +4280,8 @@ body {
 }
 
 .main__nav a {
-  margin-left: calc(25px + 80 * ((100vw - 320px) / 1600));
+  margin-left: calc(25px + 70 * ((100vw - 320px) / 1600));
+  padding: 10px;
   position: relative;
   transition: all 0.3s ease-in;
 }
@@ -4373,12 +4374,16 @@ body {
 }
 
 .main__content a:hover {
-  background: linear-gradient(27deg, #c02a2a 0%, #881010 100%);
+  background: #fff;
   transition: all 0.3s ease-in;
 }
 
 .main__content a:hover svg {
-  fill: #d3b7b7;
+  fill: #fff;
+}
+
+.main__content a:hover:after {
+  background: #fff;
 }
 
 .main__content {

@@ -1,6 +1,6 @@
 .main{
   @include adaptive-value('padding-top', 250, 150, 0);
-  @include adaptive-value('padding-bottom', 900, 500, 0);
+  @include adaptive-value('padding-bottom', 875, 500, 0);
 }
 
 .main__inner{
@@ -9,7 +9,8 @@
 }
 .main__nav{
   a{
-    @include adaptive-value('margin-left', 105, 25, 0);
+    @include adaptive-value('margin-left', 95, 25, 0);
+    padding: 10px;
     position: relative;
     transition: all 0.3s ease-in;
     &:before{
@@ -89,11 +90,14 @@
       transition: all 0.3s ease-in;
     }
     &:hover{
-      background: linear-gradient(27deg, #c02a2a 0%, #881010 100%);
+      background: #fff;
       transition: all 0.3s ease-in;
       svg{
-        fill: rgb(211, 183, 183);
+        fill: #fff;
       }
+    }
+    &:hover:after{
+      background: #fff;
     }
   }
 }
