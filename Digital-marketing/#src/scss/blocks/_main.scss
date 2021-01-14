@@ -13,7 +13,7 @@
   }
 }
 .main__content{
-  @include adaptive-value('margin-top', 80, 55, 0);
+  @include adaptive-value('margin-top', 90, 55, 0);
   h1{
     @include adaptive-value('font-size', 65, 45, 0);
     font-weight: 700;
