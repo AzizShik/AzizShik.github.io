@@ -4289,7 +4289,7 @@ body {
 .main__nav a:before {
   content: '';
   position: absolute;
-  bottom: -3px;
+  bottom: 7px;
   left: 0%;
   width: 0%;
   height: 3px;
@@ -4300,7 +4300,7 @@ body {
 .main__nav a:after {
   content: '';
   position: absolute;
-  top: -3px;
+  top: 7px;
   right: 0%;
   width: 0%;
   height: 3px;
