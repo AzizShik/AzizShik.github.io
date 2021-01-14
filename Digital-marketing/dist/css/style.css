@@ -4284,7 +4284,7 @@ body {
 }
 
 .main__content {
-  margin-top: calc(55px + 25 * ((100vw - 320px) / 1600));
+  margin-top: calc(55px + 35 * ((100vw - 320px) / 1600));
 }
 
 .main__content h1 {
