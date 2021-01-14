@@ -4311,6 +4311,15 @@ body {
   position: relative;
 }
 
+.main__content a svg {
+  position: relative;
+  z-index: 2;
+  top: -8px;
+  height: 80px;
+  width: 80px;
+  fill: #fff;
+}
+
 .main__content a:after {
   content: '';
   display: block;
@@ -4321,6 +4330,7 @@ body {
   background: linear-gradient(27deg, #ff4545 0%, #ff4242 100%);
   right: -20px;
   top: 0;
+  z-index: 1;
 }
 
 .main__content {
