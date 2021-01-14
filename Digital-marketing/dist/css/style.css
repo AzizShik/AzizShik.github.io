@@ -4280,7 +4280,43 @@ body {
 }
 
 .main__nav a {
-  margin-left: calc(35px + 70 * ((100vw - 320px) / 1600));
+  margin-left: calc(25px + 80 * ((100vw - 320px) / 1600));
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.main__nav a:before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0%;
+  width: 0%;
+  height: 3px;
+  background: #4a37ff;
+  transition: all 0.3s ease-in;
+}
+
+.main__nav a:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: 0%;
+  width: 0%;
+  height: 3px;
+  background: #4a37ff;
+  transition: all 0.3s ease-in;
+}
+
+.main__nav a:hover:before {
+  width: 100%;
+}
+
+.main__nav a:hover:after {
+  width: 100%;
+}
+
+.main__nav a:hover {
+  font-size: 24px;
 }
 
 .main__content {
@@ -4309,6 +4345,7 @@ body {
   height: 65px;
   border-radius: 8px;
   position: relative;
+  transition: all 0.3s ease-in;
 }
 
 .main__content a svg {
@@ -4318,6 +4355,7 @@ body {
   height: 80px;
   width: 80px;
   fill: #fff;
+  transition: all 0.3s ease-in;
 }
 
 .main__content a:after {
@@ -4331,6 +4369,12 @@ body {
   right: -20px;
   top: 0;
   z-index: 1;
+  transition: all 0.3s ease-in;
+}
+
+.main__content a:hover {
+  background: linear-gradient(27deg, #c02a2a 0%, #881010 100%);
+  transition: all 0.3s ease-in;
 }
 
 .main__content {
