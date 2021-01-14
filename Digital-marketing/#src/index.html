@@ -13,7 +13,7 @@
 
     <main class="main">
       <div class="container">
-        <div class="main__inner">
+        <div class="main__inner wow animate__animated animate__slideInDown" data-wow-duration="1.5s">
           <div class="main__logo">
             <img src="img/main/Logo.png" alt="">
           </div>
@@ -23,13 +23,13 @@
           </nav>
         </div>
         <div class="main__content">
-          <div class="main__content-info">
+          <div class="main__content-info wow animate__animated animate__fadeInLeft" data-wow-delay="0.5s">
             <h1>Online <span>-</span> маркетинг</h1>
             <p>Делаю бизнес прибыльнее, <br>
               а&nbsp;клиентов богаче</p>
             <a href="#"></a>
           </div>
-          <div class="main__content-image">
+          <div class="main__content-image wow animate__animated animate__fadeInRight"  data-wow-delay="0.5s">
             <img src="img/main/author.png" alt="">
           </div>
         </div>
@@ -38,6 +38,10 @@
 
   </div>
   <script src="js/script.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 
 </html>
