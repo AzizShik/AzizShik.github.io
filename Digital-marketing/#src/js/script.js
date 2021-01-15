@@ -21,8 +21,6 @@ testWebP(function (support) {
 @@include('libs/wow.min.js')
 
 $(document).ready(function () {
-  $('#phone').mask('+7 (999) 999-99-99');
-  $('#modal-phone').mask('+7 (999) 999-99-99');
 
   $('.form').validate({
     rules: {

@@ -4258,43 +4258,17 @@ body {
 .main__nav a {
   margin-left: calc(0px + 95 * ((100vw - 320px) / 1600));
   font-size: calc(15px + 4 * ((100vw - 320px) / 1600));
-  padding: 10px;
+  padding: 15px;
   position: relative;
   transition: all 0.3s ease-in;
 }
 
-.main__nav a:before {
-  content: '';
-  position: absolute;
-  bottom: 7px;
-  left: 0%;
-  width: 0%;
-  height: 3px;
-  background: #4a37ff;
-  transition: all 0.3s ease-in;
-}
-
-.main__nav a:after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  right: 0%;
-  width: 0%;
-  height: 3px;
-  background: #4a37ff;
-  transition: all 0.3s ease-in;
-}
-
-.main__nav a:hover:before {
-  width: 100%;
-}
-
-.main__nav a:hover:after {
-  width: 100%;
-}
-
 .main__nav a:hover {
-  font-size: 24px;
+  width: 136px;
+  height: 37px;
+  color: #fff;
+  background-color: #000000;
+  background-image: linear-gradient(45deg, #4575ff 0%, #5842ff 100%);
 }
 
 .main__content {
@@ -5012,8 +4986,9 @@ body {
 .nav {
   padding-top: 20px;
   width: 100%;
-  height: 133px;
+  height: 100px;
   box-shadow: 2px 1px 46px rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
 }
 
 .nav__header {
@@ -5034,6 +5009,69 @@ body {
   color: #fff;
   background-color: #000000;
   background-image: linear-gradient(45deg, #4575ff 0%, #5842ff 100%);
+}
+
+.podcast-page-title {
+  font-weight: 700;
+  font-size: calc(15px + 15 * ((100vw - 320px) / 1600));
+  margin-bottom: 15px;
+}
+
+.podcast__item {
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+}
+
+.podcast-page-text {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.podcast__text {
+  max-width: 200px;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.podcast__text span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.podcast__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.podcast__item:nth-child(2) {
+  margin-left: 80px;
+  margin-top: 15px;
+}
+
+.podcast__item:nth-child(3) {
+  margin-top: 25px;
+}
+
+.podcast-hear {
+  position: relative;
+}
+
+.play-podcast {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.play-podcast img {
+  padding: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 1185px) {
@@ -5149,18 +5187,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  .main__nav a:hover:before {
-    width: 0%;
-  }
-
-  .main__nav a:hover:after {
-    width: 0%;
-  }
-
-  .main__nav a:hover {
-    font-size: 19px;
-  }
-
   .main__content-image img {
     right: -60px;
     top: 150px;

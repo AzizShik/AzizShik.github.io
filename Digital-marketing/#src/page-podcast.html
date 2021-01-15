@@ -11,19 +11,56 @@
 <body>
 
   <div class="wrapper">
-    <nav class="nav">
-      <div class="container">
-        <div class="nav__header">
-          <a href="index.html"><img src="img/main/Logo.png" alt=""></a>
-        <ul class="nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a class="podcast__active" href="page-podcast.html">Подкасты</a></li>
-          <li><a href="cases.html">Кейсы</a></li>
-        </ul>
+    <div class="podcast-page">
+      <nav class="nav">
+        <div class="container">
+          <div class="nav__header">
+            <a href="index.html"><img src="img/main/Logo.png" alt=""></a>
+            <ul class="nav__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a class="podcast__active" href="page-podcast.html">Подкасты</a></li>
+              <li><a href="cases.html">Кейсы</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="podcast-page-info">
+        <div class="container">
+          <div class="podcast-page-title">Подкасты</div>
+          <p class="podcast-page-text">Слушайте про тренды Digital-маркетинга
+            для самообразования или просто для
+            приятного времяприпровождения</p>
+          <div class="podcast__inner">
+            <div class="podcast__item">
+              <div class="podcast__img"><img src="img/main/podcast.png" alt=""></div>
+              <p class="podcast__text">Как устанавливать доверительные отношения
+                с&nbsp;целевой
+                аудиторией
+                <span>4 минуты </span>
+              </p>
+            </div>
+            <div class="podcast__item">
+              <div class="podcast__img"><img src="img/main/podcast-soon.png" alt=""></div>
+            </div>
+            <div class="podcast__item podcast-hear">
+              <div class="podcast__img"><img src="img/main/podcast-hear.jpg" alt=""></div>
+              <div class="play-podcast">
+                  <img src="img/main/play-arrow.png" onclick="playAudio('podcast.mp3')">
+                  <script>
+                    function playAudio('podcast.mp3') {
+                      new Audio('podcast.mp3').play();
+                    }
+                  </script>
+                <p>Слушать</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   </div>
+
+
 
 
   <script src="js/script.min.js"></script>
