@@ -2,6 +2,7 @@
   color: #000000;
   font-weight: 700;
   @include adaptive-value('font-size', 30, 24, 0);
+  display: block;
 }
 .title-circle{
     display: inline-block;

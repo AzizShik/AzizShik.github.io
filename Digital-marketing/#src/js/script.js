@@ -24,20 +24,11 @@ $(document).ready(function () {
   $('#phone').mask('+7 (999) 999-99-99');
   $('#modal-phone').mask('+7 (999) 999-99-99');
 
-  $('.form__body').validate({
+  $('.form').validate({
     rules: {
-      user__name: 'required',
-      user__phone: 'required',
-      user__email: {
-        required: true,
-        email: true,
-      }
+      name: 'required',
+      phone: 'required',
     },
-    messages: {
-      user__name: "Укажите имя*",
-      user__phone: "Укажите номер*",
-      user__email: "Укажите почту правильно*",
-    }
   });
 
   $('.modal__body').validate({
@@ -56,18 +47,6 @@ $(document).ready(function () {
     }
   });
 
-  $('.slider__inner').slick({
-    prevArrow: '<button type="button" class="slick-prev">  <img src="img/slider/arrow-left.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next">  <img src="img/slider/arrow-right.svg" alt=""></button>',
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          arrows: false,
-        }
-      },
-    ]
-  });
 
   $('.catalog__tabs-triggers').on('click', 'div:not(.active)', function () {
     $(this)
