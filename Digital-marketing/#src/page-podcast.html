@@ -27,11 +27,11 @@
       <div class="podcast-page-info">
         <div class="container">
           <div class="podcast-page-title">Подкасты</div>
-          <p class="podcast-page-text">Слушайте про тренды Digital-маркетинга
+          <p class="podcast-page-text">Слушайте про тренды Digital&nbsp;-&nbsp;маркетинга
             для самообразования или просто для
             приятного времяприпровождения</p>
           <div class="podcast__inner">
-            <div class="podcast__item">
+            <div class="podcast__item position-1">
               <div class="podcast__img"><img src="img/main/podcast.png" alt=""></div>
               <p class="podcast__text">Как устанавливать доверительные отношения
                 с&nbsp;целевой
@@ -44,8 +44,8 @@
             </div>
             <div class="podcast__item podcast-hear">
               <div class="podcast__img"><img src="img/main/podcast-hear.jpg" alt=""></div>
-              <div class="play-podcast">
-                <img src="img/main/play-arrow.png" onclick="playAudio('audio/podcast.mp3')">
+              <div id="podcast" class="play-podcast">
+                <img src="img/main/play-arrow.png" >
                 <p>Слушать</p>
               </div>
             </div>
@@ -55,10 +55,10 @@
     </div>
 
     <div class="main__contact podcast__form wow animate__animated animate__fadeInLeftBig" data-wow-duration="0.75s">
-      <div class="main__contact-box">
+      <div class="main__contact-box podcast__contact-box">
         <h2 class="main__contact-title">
           3U
-        </h2>
+        </h2> 
         <div class="main__contact-info">
           <div class="main__contact-titles">
             <h3 class="main__contact-author">Родион Дели</h3>
@@ -100,9 +100,18 @@
   </footer>
   </div>
 
+
+  <audio id="podcastAudo">
+    <source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+    <source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
-    function playAudio('audio/podcast.mp3') {
-      new Audio('audio/podcast.mp3').play();
+    var podcast = document.getElementById('podcast'),
+      podcastAudio = document.getElementById('podcastAudo');
+    podcast.addEventListener('click', fPlay, false);
+    function fPlay() {
+      podcastAudio.play();
     }
   </script>
 
