@@ -29,47 +29,11 @@ $(document).ready(function () {
     },
   });
 
-  $('.modal__body').validate({
-    rules: {
-      user__name: 'required',
-      user__phone: 'required',
-      user__email: {
-        required: true,
-        email: true,
-      }
-    },
-    messages: {
-      user__name: "Укажите имя*",
-      user__phone: "Укажите номер*",
-      user__email: "Укажите почту правильно*",
-    }
+
+  $('.cases__item-trigger').click(function(){
+    $(this).next('.accordion-item__content').slideToggle(800);
+    $(this).closest('.cases__item-trigger').toggleClass('active');
   });
-
-
-  $('.catalog__tabs-triggers').on('click', 'div:not(.active)', function () {
-    $(this)
-      .addClass('active').siblings().removeClass('active')
-      .closest('.catalog__tabs').find('.catalog__tabs-item').removeClass('catalog__tabs-item--active').eq($(this).index()).addClass('catalog__tabs-item--active');
-  });
-  $('.catalog__tabs-link:first').click();
-
-
-  $('.catalog__tabs-btn').each(function (i) {
-    $(this).on('click', function (e) {
-      e.preventDefault();
-      $('.catalog__tabs-card-info').eq(i).toggleClass('active-details');
-      $('.catalog__tabs-details').eq(i).toggleClass('active-details');
-    })
-  });
-
-  $('.catalog__tabs-details-btn').each(function (i) {
-    $(this).on('click', function (e) {
-      e.preventDefault();
-      $('.catalog__tabs-card-info').eq(i).toggleClass('active-details');
-      $('.catalog__tabs-details').eq(i).toggleClass('active-details');
-    })
-  });
-
 
   $("a[href^='#']").click(function () {
     var _href = $(this).attr('href');

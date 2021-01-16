@@ -1,5 +1,5 @@
 .main{
-  @include adaptive-value('padding-top', 250, 150, 0);
+  @include adaptive-value('padding-top', 100, 50, 0);
   @include adaptive-value('padding-bottom', 875, 500, 0);
 }
 
@@ -166,7 +166,7 @@
 
 // Page 2 start
 .main--page-2{
-  @include adaptive-value('padding-top', 125, 150, 0);
+  @include adaptive-value('padding-top', 55, 30, 0);
   @include adaptive-value('padding-bottom', 30, 20, 0);
 }
 .main__content{
@@ -741,15 +741,22 @@
   }
   .footer__author{
     color: #000000;
-    font-size: 16px;
+    @include adaptive-value('font-size', 16, 14, 0)
     font-weight: 700;
     margin-right: 50px;
-    @include adaptive-value('padding-left', 160, 80, 0);
+  }
+  @media(max-width:575px){
+    .footer__author{
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
   }
   .footer__defender{
     color: #000000;
+    text-align: center;
     font-size: 16px;
     max-width: 480px;
+    @include adaptive-value('font-size', 16, 13, 0)
   }
 
 
@@ -1013,10 +1020,21 @@
   .nav__list{
     li{
       display: inline-block;
-      @include adaptive-value('margin-left', 110, 5, 0);
+      @include adaptive-value('margin-left', 110, 0, 0);
       @include adaptive-value('font-size', 22, 18, 0);
     }
+    a{
+      padding: 10px 15px;
+    }
+    a:hover {
+      width: 136px;
+      height: 37px;
+      color: #fff;
+      background-color: #000;
+      background-image: linear-gradient(45deg,#4575ff 0,#5842ff 100%);
+    }
   }
+
   .podcast__active{
     width: 136px;
     height: 37px;
@@ -1025,7 +1043,28 @@
     background-color: #000000;
     background-image: linear-gradient(45deg, #4575ff 0%, #5842ff 100%);
   }
-
+  @media(max-width:375px){
+    .nav__list{
+      a{
+        padding: 10px 10px;
+      }
+    }
+    a:hover {
+      width: 136px;
+      height: 37px;
+      color: #fff;
+      background-color: #000;
+      background-image: linear-gradient(45deg,#4575ff 0,#5842ff 100%);
+    }
+    .podcast__active{
+      width: 136px;
+      height: 30px;
+      padding: 5px 5px;
+      color: #fff;
+      background-color: #000000;
+      background-image: linear-gradient(45deg, #4575ff 0%, #5842ff 100%);
+    }
+  }
   .podcast-page-title{
     font-weight: 700;
     @include adaptive-value('font-size', 30, 22, 0);
@@ -1202,3 +1241,299 @@
     }
   }
 // Podcast Page end
+
+// Cases-Page start
+  .cases{
+    margin-bottom: 30px;
+    span{
+      color: #534fff;
+    }
+  }
+  .cases__wrapper{
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 10px solid #4575ff;
+    @include adaptive-value('padding', 30, 15, 0);
+  }
+
+  .cases__pizza{
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .cases__pizza-info{
+    margin-top: 50px;
+    margin-left: 50px;
+    h1{
+      font-weight: 700;
+      @include adaptive-value('font-size', 30, 24, 0);
+      margin-bottom: 10px;
+    }
+    p{
+      @include adaptive-value('font-size', 17, 15, 0);
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .btn-step{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 262px;
+      height: 47px;
+      box-shadow: -2px -1px 9px 4px rgba(74, 105, 255, 0.25);
+      border-radius: 10px;
+      background-color: #f6f6f6;
+      @include adaptive-value('font-size', 17, 14, 0);
+      img{
+        margin-right: 15px;
+      }
+    }
+  }
+
+
+  .accordion-item__content{
+    img{
+      width: 100%;
+    }
+  }
+  .cases__item-trigger{
+    cursor: pointer;
+      width: 100%;
+      margin-top: 30px;
+      @include adaptive-value('font-size', 22, 16, 0);
+      font-weight: 500;
+        box-shadow: -2px -1px 9px 4px rgba(0, 0, 0, 0.13);
+      border-radius: 10px;
+      width: 100%;
+      background-color: #f6f6f6;
+      @include adaptive-value('padding', 20, 10, 0);
+      img{
+        position: relative;
+        bottom: 3px;
+        left: 10px;
+      }
+  }
+  .accordion-item__content{
+    display: none;
+  }
+
+  .cases__pizza-info{
+    position: relative;
+  }
+
+  .cases-logo{
+    position: absolute;
+    right: -25px;
+    top: -75px;
+  }
+
+  @media(max-width:1200px){
+    .cases-logo{
+      position: static;
+      margin-bottom: 15px;
+    }
+    .cases__pizza{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cases__pizza-info{
+      text-align: center;
+    }
+    .btn-step{
+      margin: 0 auto;
+    }
+    .cases__pizza-img{
+      width: 90%;
+      margin-bottom: 20px;
+      img{
+        width: 100%;
+      }
+    }
+    .cases__pizza-info {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+  }
+
+  @media(max-width:767px){
+    .cases__pizza-img{
+      width: auto;
+    }
+  }
+
+  @media(max-width:575px){
+    .cases__wrapper{
+      border: 5px solid #4575ff;
+    }
+    .cases__pizza-info .btn-step {
+        width: 210px;
+    }
+  }
+
+  .active{
+    img{
+      transform: rotate(-90deg);
+    }
+  }
+// Cases-Page end
+
+// Cases Modal start
+
+  .modal__dialog{
+    box-shadow: -2px -1px 9px 4px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    border: 10px solid #4575ff ;
+    @include adaptive-value('padding', 30, 15, 0);
+    span{
+      color: #5648ff;
+      }
+  }
+
+  @media(max-width:575px){
+    .modal__dialog{
+      border: 5px solid #4575ff ;
+    }
+  }
+
+  .modal__list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    li{
+      margin-left: 25px;
+    }
+    li:first-child{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    li:nth-child(2){
+      position: relative;
+      font-size: 15px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #000;
+        top: 50%;
+        left: -12px;
+        transform: translateY(-50%);
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #000;
+        top: 50%;
+        right: -12px;
+        transform: translateY(-50%);
+      }
+    }
+    li:nth-child(3){
+      font-size: 10px;
+      color: #4a69ff;
+    }
+  }
+  .modal__steps{
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+    li{
+      margin-left: 25px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    li:nth-child(3){
+      position: relative;
+      font-weight: 400;
+      font-size: 15px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #000;
+        top: 50%;
+        left: -12px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .modal__target{
+    max-width: 530px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+
+
+  .modal__steps-inner{
+    display: flex;
+  }
+  .modal__steps-item:not(:first-child){
+    margin-left: 50px;
+  }
+  .modal__steps-item:nth-child(2){
+    img{
+      margin-bottom: 30px;
+    }
+  }
+  .modal__steps-item:nth-child(4){
+    padding: 15px 10px;
+    border-radius: 10px;
+    height: 100px;
+    font-size: 14px;
+    border: 1px solid #898989;
+    background-color: #f6f6f6;
+    .fq{
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 13px;
+      width: 41px;
+      height: 28px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      background-image: linear-gradient(45deg, #464646 0%, #595959 100%);
+      display: block;
+      line-height: 28px;
+      text-align: center;
+    }
+  }
+
+  .modal__decision{
+    margin-bottom: 100px;
+    p{
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 20px;
+      margin-top: 25px;
+    }
+  }
+  .modal__decision-inner{
+    display: flex;
+  }
+  .modal__decision-item:not(:first-child){
+    margin-left: 50px;
+  }
+  .modal__decision-item:nth-child(2){
+    img{
+      display: block;
+    }
+  }
+
+  .modal__step-2{
+    p{
+      max-width: 550px;
+      font-size: 15px;
+    }
+  }
+// Cases Modal end
