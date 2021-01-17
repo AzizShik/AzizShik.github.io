@@ -5272,23 +5272,23 @@ body {
 }
 
 .modal__steps-item:not(:first-child) {
-  margin-left: 50px;
+  margin-left: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 
 .modal__steps-item:nth-child(2) img {
   margin-bottom: 30px;
 }
 
-.modal__steps-item:nth-child(4) {
+.fq-step-item {
   padding: 15px 10px;
   border-radius: 10px;
-  height: 100px;
+  min-height: 100px;
   font-size: 14px;
   border: 1px solid #898989;
   background-color: #f6f6f6;
 }
 
-.modal__steps-item:nth-child(4) .fq {
+span.fq {
   margin-bottom: 10px;
   color: #ffffff;
   font-size: 13px;
@@ -5303,14 +5303,15 @@ body {
 }
 
 .modal__decision {
-  margin-bottom: 100px;
+  margin-bottom: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
 
-.modal__decision p {
+.decision-descr {
   font-weight: 500;
   font-size: 15px;
   margin-bottom: 20px;
   margin-top: 25px;
+  max-width: 600px;
 }
 
 .modal__decision-inner {
@@ -5318,16 +5319,128 @@ body {
 }
 
 .modal__decision-item:not(:first-child) {
-  margin-left: 50px;
+  margin-left: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 
 .modal__decision-item:nth-child(2) img {
   display: block;
 }
 
-.modal__step-2 p {
-  max-width: 550px;
+.modal__step-2 .modal__step2-inner {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+.modal__step-2 .modal__step2-item:not(:first-child) {
+  margin-left: calc(25px + 25 * ((100vw - 320px) / 1600));
+}
+
+.modal__step-2 .step2-first {
+  display: flex;
+  align-items: center;
+}
+
+.modal__step-2 .step2-first p {
+  margin-left: 40px;
+}
+
+.modal__step-2 .step2-first p span {
+  display: block;
+  font-size: 10px;
+}
+
+.modal__step-2 .step2-last {
+  width: 50%;
+}
+
+.modal__step-2 .dish {
+  font-size: 13px;
+}
+
+.modal__step-2 .dish-make {
+  color: #ff7474;
+}
+
+.modal__step-2 .payment span {
+  color: #32cf80;
+  display: block;
+}
+
+.modal__step-2 .step2-close {
+  position: relative;
+  left: 130px;
+  bottom: 30px;
+}
+
+.step-2-target {
+  max-width: 570px;
   font-size: 15px;
+}
+
+.modal__step-3 img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal__step-3 p {
+  font-size: 15px;
+  max-width: 750px;
+}
+
+.modal__step-3 .modal__step-3-inner {
+  margin-top: calc(25px + 15 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(25px + 25 * ((100vw - 320px) / 1600));
+  display: flex;
+}
+
+.modal__step-3 .modal__step3-item p {
+  max-width: 500px;
+}
+
+.modal__step-3 .modal__step3-item P:nth-child(2) {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.modal__step-3 .modal__step3-item:nth-child(2) {
+  flex-basis: 60%;
+}
+
+.modal__results .results-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-left: 10px;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  height: 50px;
+  background: #4575ff;
+}
+
+.modal__results .results-text:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: url("../img/main/cases-step.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.site-for-bisness {
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: calc(24px + 6 * ((100vw - 320px) / 1600));
 }
 
 @media (max-width: 1200px) {
