@@ -29,7 +29,6 @@ $(document).ready(function () {
     },
   });
 
-
   $('.cases__item-trigger').click(function(){
     $(this).next('.accordion-item__content').slideToggle(800);
     $(this).closest('.cases__item-trigger').toggleClass('active');
@@ -41,7 +40,7 @@ $(document).ready(function () {
     return false;
   });
 
-  $('#modal-btn').click(function () {
+  $('.btn-step').click(function () {
     $('.modal__dialog').fadeIn();
     $('.modal').fadeIn();
   });
