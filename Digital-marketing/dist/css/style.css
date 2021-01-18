@@ -6026,7 +6026,7 @@ span.fq {
   }
 
   .modal__close {
-    top: -50px;
+    top: 0px;
     right: 0;
   }
 }
