@@ -1,6 +1,66 @@
-.main{  
-  background: -webkit-linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
-  background: -moz-linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
-  background: linear-gradient(180deg, rgb(199, 210, 208) 70%, rgb(248, 252, 255) 100%);
-  @include adaptive-value('padding-top', 65, 35, 0);
+.main{
+  height: 100vh;
+  background: url('../img/main/bg.jpg');
+  @include adaptive-value('padding-top', 100, 50, 0);
+}
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+header{
+  ul{
+    li{
+      display: inline-block;
+    }
+  }
+}
+.header__logo{
+  max-width: 200px;
+  text-align: center;
+  .logo{
+    font-size: 72px;
+    color: #AFFF49;
+    margin-bottom: 10px;
+  }
+  p{
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  span{
+    font-size: 18px;
+  }
+}
+.header__nav{
+  li{
+    margin-left: 25px;
+  }
+}
+.social{
+  li{
+    margin-left: 15px;
+    font-size: 36px;
+    a{
+      border: 2px solid #fff;
+      padding: 15px;
+      border-radius: 50%;
+      transition: all 0.4s ease;
+      &:hover{
+        background: #fff;
+      }
+    }
+    .vk:hover{
+      color: #597da3;
+      box-shadow: 0 0 20px #597da3;
+    }
+    .tele:hover{
+      color: #0088cc;
+      box-shadow: 0 0 20px#0088cc;
+    }
+    .inst:hover{
+      color: #8a3ab9;
+      box-shadow: 0 0 20px  #8a3ab9;
+    }
+  }
 }
