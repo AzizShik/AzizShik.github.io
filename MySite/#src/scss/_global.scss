@@ -34,7 +34,6 @@ button{
 body{
   font-family: 'Trebuchet MS', sans-serif;
   @include adaptive-value('font-size', 24, 18, 0);
-  color: #fff;
 }
 .wrapper{
   overflow-x: hidden;
