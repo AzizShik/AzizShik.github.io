@@ -6,7 +6,6 @@
 .header__inner{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   
 }
 header{
@@ -17,11 +16,11 @@ header{
   }
 }
 .header__logo{
+  margin-top: -30px;
   max-width: 200px;
   text-align: center;
   .logo{
     font-size: 72px;
-    color: #AFFF49;
     margin-bottom: 10px;
   }
   p{
@@ -34,11 +33,46 @@ header{
 }
 .header__nav{
   li{
+    position: relative;
     margin-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: #5091CD;
+        bottom: 7px;
+        transition: all 0.5s ease-in;
+      }
+      &:hover:before{
+        width: 100%;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 100%;
+        transform: translateX(-100%);
+        width: 0%;
+        height: 2px;
+        background: #5091CD;
+        transition: all 0.5s ease-in;
+      }
+      &:hover:after{
+        width: 100%;
+      }
+    }
   }
 }
 .social{
   li{
+    display: block;
+    margin-bottom: 50px;
     margin-left: 15px;
     font-size: 36px;
     a{
@@ -64,3 +98,4 @@ header{
     }
   }
 }
+
