@@ -6,6 +6,7 @@ https://azizshik.github.io/Repairs/dist/<br>
 https://azizshik.github.io/Wall/app/<br>
 https://azizshik.github.io/vr-box/dist/<br>
 https://azizshik.github.io/Pulse/dist/<br>
+https://azizshik.github.io/Parts/dist/<br>
 
 Если тебе интересно сотрудничество:
 https://vk.com/im?sel=632704065 VK<br>
