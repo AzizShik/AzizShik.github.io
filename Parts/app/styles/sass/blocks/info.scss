@@ -1,0 +1,20 @@
+.info{
+  text-align: center;
+}
+.title{
+  font-family: lato-r, sans-serif;
+  font-size: 30px;
+  padding-top: 85px;
+  @include media-breakpoint-down(md){
+    padding-top: 45px;
+    font-size: 24px;
+  }
+}
+.descr{
+  font-family: lato-b, sans-serif;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,82 @@
+.details-order{
+  background-color: $second;
+  padding-bottom: 75px;
+  @include media-breakpoint-down(md){
+    padding-bottom: 40px;
+  }
+}
+.details-order__inner{
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  border: 5px solid #fff;
+  padding: 50px;
+  @include media-breakpoint-down(md){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.mark-box,
+.model-box,
+.data-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  
+}
+.mark{
+  width: 240px;
+  height: 40px;
+  
+}
+.need-details-box{
+  align-items: center;
+}
+.need-details-box,
+.need-name-box,
+.details-phone-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  textarea{
+    width: 240px;
+    height: 120px;
+    resize: none;
+    padding: 10px;
+  }
+  input{
+    padding: 10px;
+  }
+}
+
+.label{
+  margin-bottom: 5px;
+  font-family: lato-r, sans-serif;
+  font-size: 13px;
+}
+
+.details-button{
+  margin-top: 10px;
+  @include media-breakpoint-down(md){
+    width: 100%;
+  }
+}
+.details-button.button{
+  @include media-breakpoint-down(md){
+    max-width: 100%;
+  }
+}
+.details-button.button{
+  @include media-breakpoint-down(xs){
+    font-size: 11px;
+  }
+}
+
+
+@include media-breakpoint-down(md){
+  .details-order__item{
+    width: 100%;
+  }
+}

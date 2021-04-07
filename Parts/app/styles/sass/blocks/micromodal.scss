@@ -1,0 +1,67 @@
+.modal{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000, .8);
+  z-index: 9999;
+}
+.modal-fast__dialog,
+.modal-details__dialog,
+.modal-thanks__dialog{
+  border: 10px solid rgba(#222, .3);
+  border-radius: 8px;
+  background:#fff;
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 320px;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.modal-fast__close,
+.modal-details__close,
+.modal-thanks{
+  color: $accent;
+  font-size: 50px;
+  position: absolute;
+  right: -52px;
+  top: -30px;
+}
+
+
+.form-input{
+  display: block;
+  min-width: 270px;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border: 1px solid rgb(134, 131, 131);
+  border-radius: 4px;
+  position: relative;
+  &::placeholder{
+    font-family: lato-b, sans-serif;
+  }
+}
+
+.form-submit{
+  margin-top: 15px;
+}
+
+.form-input-box{
+  position: relative;
+  label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    right: 20px;
+  }
+}
+
+.modal[aria-hidden='true'] {
+  display: none;
+}
