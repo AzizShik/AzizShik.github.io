@@ -8,15 +8,17 @@
 
 import MicroModal from 'micromodal';
 
-MicroModal.init({
-	openTrigger: 'data-custom-open',
-	closeTrigger: 'data-custom-close',
-	disableScroll: true,
-	awaitOpenAnimation:  true, 
-	awaitCloseAnimation: true, 
-});
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	
+	MicroModal.init({
+		openTrigger: 'data-custom-open',
+		closeTrigger: 'data-custom-close',
+		disableScroll: true,
+		awaitOpenAnimation:  true, 
+		awaitCloseAnimation: true, 
+	});
 
 });

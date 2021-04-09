@@ -7,16 +7,6 @@
     padding-bottom: 25px;
   }
 }
-.brends__images{
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  img{
-    width: 100%;
-  }
-}
-
-
 
 .brends__video{
   display: flex;
@@ -49,6 +39,16 @@
   }
 }
 
+.brends__images{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 60px;
+  img{
+    width: 100%;
+  }
+}
+
 .brends-image:hover{
   display: none;
 }
@@ -60,3 +60,4 @@
 .brends-image:hover + .brends-imagehover{
   display: block;
 }
+
