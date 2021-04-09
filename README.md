@@ -1,6 +1,7 @@
 Привет! Меня зовут Абдул-Азиз. <br>
 Я профессионально занимаюсь веб - разработкой. <br>
 Вот мои последние работы <br>
+https://azizshik.github.io/AzizCreateCoolSlider/dist/<br>
 https://azizshik.github.io/Parts/dist/<br>
 https://azizshik.github.io/Digital-marketing/dist/<br>
 https://azizshik.github.io/Repairs/dist/<br>
