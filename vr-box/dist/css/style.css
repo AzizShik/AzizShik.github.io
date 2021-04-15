@@ -4518,7 +4518,11 @@ body {
   height: 425px;
   color: #ffffff;
 }
-
+@media (max-width: 991px){
+  heiht: auto;
+  background-size: cover;
+  padding-bottom: 20px;
+}
 .order__text {
   max-width: 510px;
   height: 70px;
