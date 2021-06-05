@@ -1,0 +1,24 @@
+#cursor
+  display: inline-block
+  position: absolute
+  width: 15px
+  height: 15px
+  background: $accent
+  z-index: 1000
+  border-radius: 20px 
+  user-select: none
+  pointer-events: none
+  margin: -7.5px 0 0 -7.5px
+  transform: scale(1.5)
+  transition: transform .5s cubic-bezier(.97,.09,.23,.92)
+  &.active
+    transform: scale(3)
+    background-color: rgba(#fff, .25)
+    border: .1px solid $accent
+    +media-breakpoint-down(sm)
+      display: none
+  &.hidden
+    transform: scale(.001)
+  @include media-breakpoint-down(md)
+    display: none
+  

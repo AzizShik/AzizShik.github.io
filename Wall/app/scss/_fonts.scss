@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('../fonts/MuseoSansCyrl700.eot');
+  src: url('../fonts/MuseoSansCyrl700.eot') format('embedded-opentype'),
+       url('../fonts/MuseoSansCyrl700.woff2') format('woff2'),
+       url('../fonts/MuseoSansCyrl700.woff') format('woff'),
+       url('../fonts/MuseoSansCyrl700.ttf') format('truetype');
+       font-weight: 700;
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('../fonts/MuseoSansCyrl300.eot');
+  src: url('../fonts/MuseoSansCyrl300.eot') format('embedded-opentype'),
+       url('../fonts/MuseoSansCyrl300.woff2') format('woff2'),
+       url('../fonts/MuseoSansCyrl300.woff') format('woff'),
+       url('../fonts/MuseoSansCyrl300.ttf') format('truetype');
+       font-weight: 300;
+}
+@mixin f700 {
+  font-family: 'MuseoSansCyrl', sans-serif;
+  font-weight: 700;
+}
+@mixin f300 {
+  font-family: 'MuseoSansCyrl', sans-serif;
+  font-weight: 300;
+}

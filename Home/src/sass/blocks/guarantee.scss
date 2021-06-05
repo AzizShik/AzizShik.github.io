@@ -1,0 +1,14 @@
+.guarantee{
+  @include adaptive-value(padding-bottom, 150, 70, 0);
+}
+.guarantee__title{
+  max-width: 750px;
+}
+.guarantee__descr{
+  max-width: 600px;
+}
+
+.guarantee__img{
+  margin-top: 70px;
+  text-align: center;
+}

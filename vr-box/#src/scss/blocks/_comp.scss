@@ -1,0 +1,120 @@
+
+.comp{
+  @include adaptive-value('padding-top', 75, 45, 0);
+  @include adaptive-value('padding-bottom', 75, 45, 0);
+  background-color: $simulation;
+}
+.comp__inner{
+  display: flex;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-image: url('../img/comp/comp-coub.png');
+    right: -500px;
+    top: -40px;
+    width: 199px;
+    height: 226px;
+    z-index: 1;
+  }
+}
+.comp__info{
+  max-width: 500px;
+}
+.comp__info-box{
+  @include adaptive-value('margin-top', 75, 45, 0);
+  display: flex;
+  justify-content: space-between;
+}
+.comp__info-item:nth-child(2){
+  margin-left: 35px;
+  margin-right: 10px;
+}
+.comp__info-item{
+  span{
+    margin-left: 25px;
+    margin-top: 8px;
+    display: inline-block;
+    @include adaptive-value('font-size', 22, 17, 0);
+    font-weight: 500;
+  }
+  .comp-ios{
+    margin-left: 50px;
+  }
+}
+.comp__content{
+  margin-top: 75px;
+  margin-left: 88px;
+  &-text{
+    width: 540px;
+    margin-top: 20px;
+    @include adaptive-value('font-size', 22, 17, 0);
+    font-weight: 500;
+  }
+}
+
+@media(max-width:1200px){
+  .comp__inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  .comp__info-title{
+    text-align: center;
+  }
+  .comp__content{
+    margin-left: 0px;
+    max-width: 500px;
+    img{
+      width: 100%;
+    }
+    &-text{
+      max-width: 540px;
+      text-align: center;
+    }
+  }
+}
+@media(max-width:575px){
+  .comp__content{
+    margin-left: 0px;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+    &-text{
+      max-width: 300px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  }
+  .comp__info-box{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .comp__info-item{
+
+    img{
+      width: 150px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .comp__info-item:nth-child(2){
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .comp__info-item{
+    span{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    .comp-ios{
+      margin-left: 0px;
+    }
+  }
+  .comp__content{
+    margin-top: 35px;
+  }
+}

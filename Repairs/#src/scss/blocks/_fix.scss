@@ -1,0 +1,16 @@
+.fix{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 280px;
+  background-color: #ffc000;
+}
+@media(max-width:550px){
+  .fix__title{
+    max-width: 500px;
+    line-height: 36px;
+  }
+  .fix {
+    min-height: 280px;
+  }
+}

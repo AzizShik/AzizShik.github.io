@@ -1,0 +1,177 @@
+.project{
+  @include adaptive-value(padding-bottom, 200, 100, 0);
+}
+.project__tabs{
+  margin-top: 50px;
+}
+
+.project__tabs-triggers{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.project__tabs-link{
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  margin: 30px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  transition: all .5s ease-in;
+
+  &--active{
+    border-width: 2px;
+    border-color: rgb(65, 89, 107);
+    border-style: solid;
+    border-radius: 5px;
+    color: #fff;
+    background: #000;
+  }
+}
+
+
+@media(max-width:575px){
+  .project__tabs-triggers{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .project__tabs-link{
+    display: block;
+  }
+}
+
+
+.project__tabs-slide {
+  border-width: 1px;
+  border-color: rgb(232, 232, 232);
+  border-style: solid;
+  border-radius: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 370px;
+}
+.project__tabs-slide-img {
+  margin-bottom: 20px;
+}
+
+@media(max-width:1200px){
+  .project__tabs-slide {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+
+.project__tabs-slide-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.project__tabs-slide-info{
+  margin-bottom: 30px;
+}
+.project__tabs-slide-text {
+  font-size: 18px;
+}
+
+.project__tabs-slide-btn {
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.project__tabs-content-item{
+  position: relative;
+  display: none;
+}
+
+.project__tabs-content-item--active{
+  display: block;
+  position: relative;
+}
+
+
+
+@media(max-width:480px){
+  .project__tabs-slide {
+    min-width: 250px;
+  }
+}
+
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 37%;
+    transform: translateX(50%);
+    left: auto;
+}
+
+@media(max-width:767px){
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 15%;
+  }
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 37%;
+  transform: translateX(-50%);
+  right: auto;
+}
+
+@media(max-width:767px){
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 15%;
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    cursor: pointer;
+    color: $text-color;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 110%;
+}
+
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 24px;
+}
+
+.swiper-pagination {
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 10px;
+  background: $text-color;
+}
+
+.swiper-container-two, .swiper-container-three, .swiper-container-four, .swiper-container-five {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+.swiper-pagination-two, .swiper-pagination-three, .swiper-pagination-four, .swiper-pagination-five{
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,20 @@
+
+@import "smart-grid";
+@import "blocks/fonts";
+@import '_config';
+@import "blocks/home-header.scss";
+@import "blocks/project.scss";
+@import "blocks/building.scss";
+@import "blocks/guarantee.scss";
+@import "blocks/material.scss";
+@import "blocks/timing.scss";
+@import "blocks/staff.scss";
+@import "blocks/face.scss";
+@import "blocks/questions.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";
+@import "blocks/progress.scss";
+
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/animate.css/animate.min';
+@import '../vendor/swiper.bundle.css';

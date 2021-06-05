@@ -1,0 +1,145 @@
+.main{
+  background: url('../img/main/main-bg.jpg') -3px -8px no-repeat;
+  background-size: cover;
+  min-height: 700px;
+}
+.header{
+  background: rgba(#000, 0.5);
+  height: 87px;
+}
+.header__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.header__logo{
+  display: flex;
+  align-items: center;
+  img{
+    width: 100%;
+  }
+  p{
+    @include adaptive-value('font-size', 20, 13, 0);
+    margin-left: 15px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+}
+.header__phone{
+  a{
+    @include adaptive-value('font-size', 26, 15, 0);
+    font-weight: 700;
+    transition: all 0.3s;
+    &:hover{
+      color: $main;
+      span{
+        color: #fff;
+      }
+    }
+  }
+  span{
+    text-align: center;
+    display: block;
+    color: $main;
+    @include adaptive-value('font-size', 20, 13, 0);
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+.main__content{
+  position: relative;
+  color: #fff;
+  &:before{
+    content: '';
+    position: absolute;
+    background: url('../img/main/main-dino.png') 0 0 no-repeat;
+    width: 750px;
+    height: 425px;
+    right: 120px;
+    top: 100px;
+    z-index: 1; 
+  }
+  &-title{
+    text-shadow: 0 3px 0 #272b25;
+    @include adaptive-value('font-size', 40, 21, 0);
+    @include adaptive-value('margin-top', 109, 53, 0);
+    font-weight: 700;
+    max-width: 750px;
+    width: 100%;
+  }
+  &-delivery{
+    margin-top: 10px;
+    @include adaptive-value('font-size', 30, 18, 0);
+    font-weight: 700;
+  }
+  &-btn{
+    margin-top: 22px;
+    text-transform: uppercase;
+  }
+  &-vrbox{
+    @include adaptive-value('margin-top', 39, 29, 0);
+    margin-left: -20px;
+    display: block;
+  }
+}
+
+@media(max-width:1600px){
+  .main__content{
+    &:before{
+      right: 0px;
+      top: 95px;
+    }
+  }
+}
+@media(max-width:1350px){
+  .main__content{
+    &:before{
+      width: 525px;
+      top: 75px;
+    }
+  }
+}
+@media(max-width:1060px){
+  .main__content{
+    &:before{
+      width: 425px;
+      top: 70px;
+    }
+  }
+}
+@media(max-width:991px){
+  .main__content{
+    &:before{
+      display: none;
+    }
+  }
+}
+@media(max-width:610px){
+  .main__content{
+    &-vrbox{
+      width: 100%;
+    }  
+  }
+}
+@media(max-width:575px){
+  .header__inner{
+    flex-direction: column;
+  }
+  .header{
+    height: 165px;
+  }
+  .header__logo{
+    flex-direction: column;
+    img{
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 10px;
+    }
+  }
+}

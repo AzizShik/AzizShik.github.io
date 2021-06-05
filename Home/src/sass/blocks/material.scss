@@ -1,0 +1,40 @@
+.material{
+  background-image: url('../img/material-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+
+  @include adaptive-value(padding-bottom, 100, 50, 0);
+}
+.material__title{
+  color: #ffffff;
+  padding-bottom: 70px;
+}
+
+.material__inner{
+  @include row-flex();
+}
+.material__item{
+  @include col();
+  @include size-lg(3);
+  @include size-md(6);
+  @include size-xs(12);
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  img{
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 20px;
+  }
+  a{
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
+
+  margin-bottom: 20px;
+}

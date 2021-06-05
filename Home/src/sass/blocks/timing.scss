@@ -1,0 +1,39 @@
+.timing{
+  background-image: url('../../img/timing-bg.jpg');
+  background-position: center top -18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 780px;
+
+  @include adaptive-value(padding-bottom, 60, 30, 0);
+}
+
+.timing__title{
+  max-width: 670px;
+  @include adaptive-value(margin-bottom, 100, 50, 0);
+}
+
+.timing__inner{
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.timing__item{
+  display: flex;
+  margin-bottom: 30px;
+  &-img{
+    margin-right: 20px;
+  }
+  &-title{
+    margin-bottom: 30px;
+    max-width: 470px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  &-text{
+    font-size: 14px;
+    max-width: 600px;
+    margin-bottom: 15px;
+  }
+}

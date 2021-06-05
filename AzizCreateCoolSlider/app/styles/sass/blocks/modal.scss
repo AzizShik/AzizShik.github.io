@@ -1,0 +1,43 @@
+.modal{
+  z-index: 99;
+  position: absolute;
+  font-family: raleway-vh, sans-serif;
+}
+
+.modal__header{
+  text-align: center;
+}
+
+.modal__container{
+  background-color: lighten($deep, 7);
+  box-shadow: 0 0 0 8px rgba(#fff, 0.3);
+  border-radius: 0.1px;
+}
+.modal__title{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: oswald-vh, sans-serif;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+
+
+.modal__close{
+  border: none;
+  outline: transparent;
+  color: #fff;
+  opacity: 0.25;
+  transition: all 0.25s ease-out;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.modal__input{
+  margin-bottom: 8px;
+}
+
+.modal__footer{
+  text-align: center;
+}
