@@ -14,7 +14,7 @@ https://azizshik.github.io/vr-box/dist/<br>
 https://azizshik.github.io/Pulse/dist/<br>
 
 
-Если тебе интересно сотрудничество: <br>
+Если вам интересно сотрудничество: <br>
 https://vk.com/im?sel=632704065 VK<br>
 https://t.me/abdyl_aziz TELEGRAM<br>
 https://www.instagram.com/abdyl_aziz__/?hl=ru INSTA<br>
