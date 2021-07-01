@@ -69,11 +69,7 @@ menuBtn.forEach(function(item) {
 
     menuContent.classList.toggle('header-top-menu--open');
 
-    if (item.classList.contains('menu-burger-open')) {
-      document.body.classList.add('page-scroll');
-    } else {
-      document.body.classList.remove('page-scroll');
-    }
+
 
     headerList.addEventListener('click', function (event) {
       if(event.target.getElementsByTagName = "LI") {

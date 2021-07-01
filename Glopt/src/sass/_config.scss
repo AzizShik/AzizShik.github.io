@@ -108,6 +108,11 @@ body{
 .page-scroll{
   overflow: hidden;
 }
+@media(min-width:1200px) {
+  .page-scroll{
+    padding-right: 10px;
+  }
+}
 
 .container{
   max-width: 1170px;
@@ -130,6 +135,36 @@ a{
   cursor: pointer;
   font-size: 12px;
   background-color: $main-color;
+
+  transition: all .25s ease;
+  position: relative;
+  z-index: 3;
+  border: 2px solid transparent;
+  &:hover{
+    border: 2px solid $main-color;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    background: #000;
+    border-radius: 30px;
+
+    transition: all .25s ease;
+    z-index: -1;
+  }
+  &:hover:before{
+    width: 100%;
+    height: 100%;
+  }
+
+  &:active{
+    transform: scale(0.85);
+  }
 }
 
 
