@@ -149,3 +149,20 @@ let mySwiper = new Swiper ('.swiper-container', {
     
   }
   });
+
+
+  // Preloader
+
+  const preloader = document.getElementById('preloader');
+
+  document.documentElement.classList.add('page-scroll');
+
+
+  window.onload = function() {
+      preloader.classList.add('hide-preloader');
+
+      if(preloader.classList.contains('hide-preloader')){
+        document.documentElement.classList.remove('page-scroll');
+      }
+      
+  }
