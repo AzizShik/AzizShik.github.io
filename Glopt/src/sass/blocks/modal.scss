@@ -118,8 +118,10 @@
 }
 @media(max-width:320px) {
   .modal__body{
-    padding: 15px;
-    max-width: 280px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 260px;
   }
   .modal__form-input {
     max-width: 240px;

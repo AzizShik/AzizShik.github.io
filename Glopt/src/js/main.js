@@ -17,7 +17,7 @@ im.mask(selector);
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.05
+        threshold: 0.03
     };
 
     const loadImage = function (entries, observer) {
@@ -69,7 +69,11 @@ menuBtn.forEach(function(item) {
 
     menuContent.classList.toggle('header-top-menu--open');
 
-
+    if(menuContent.classList.contains('header-top-menu--open')){
+      document.body.classList.add('page-scroll');
+    } else{
+      document.body.classList.remove('page-scroll');
+    }
 
     headerList.addEventListener('click', function (event) {
       if(event.target.getElementsByTagName = "LI") {
