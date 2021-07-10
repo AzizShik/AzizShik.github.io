@@ -1,5 +1,5 @@
 Привет! Меня зовут Абдул-Азиз. <br>
-Я профессионально занимаюсь веб - разработкой. <br>
+Я занимаюсь веб - разработкой. <br>
 Вот мои последние работы <br>
 https://azizshik.github.io/Glopt/build/</br>
 https://azizshik.github.io/Irvas/build/index.html <br>
