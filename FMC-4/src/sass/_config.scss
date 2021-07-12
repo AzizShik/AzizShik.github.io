@@ -89,10 +89,12 @@ img{
   background: lighten(#000, 10);
 }
 
-
+html{
+  font-size: 10px;
+}
 
 body{
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -151,6 +153,23 @@ a{
       color: #fff;
     }
   }
+// MENU
+
+  .header__content-btn{
+    &:hover{
+      background: lighten($main-color, 30);
+    }
+  }
+  .header__content-btn{
+    &:hover{
+      background: lighten($main-color, 30);
+    }
+  }
+  .header__content-arrows-btn{
+    &:hover:before, &:hover:after{
+      background: lighten($main-color, 20);
+    }
+  }
 }
 
 // ANIMATION
@@ -189,7 +208,7 @@ a{
   background: $main-color;
 
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;

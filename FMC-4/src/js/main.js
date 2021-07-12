@@ -5,7 +5,7 @@ document.documentElement.classList.add('page-scroll');
 window.onload = function(){
   preloader.classList.add('hide-preloader');
   document.documentElement.classList.remove('page-scroll');
-} 
+};
 
 window.addEventListener('DOMContentLoaded', function(){
   var selector = document.getElementsByClassName("phone-mask");
@@ -173,42 +173,78 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 
 // SLIDER
 
-  let position = 0;
   const container = document.querySelector('.header__content'),
         track = document.querySelector('.header__content-slider'),
-        item = document.querySelector('.header__content-item'),
+        items = document.querySelectorAll('.header__content-item'),
+        dots = document.querySelectorAll('.header__content-btn'),
         btnPrev = document.querySelector('.arrow-prev'),
-        btnNext = document.querySelector('.arrow-next'),
-        itemCount = item.length,
-        clientWidth = track.clientWidth;
+        btnNext = document.querySelector('.arrow-next');
+
+  let index = 0;
+
+  const activeSlide = (n) => {
+    for(let item of items){
+      item.classList.remove('header__content-item--active');
+    }
+    items[n].classList.add('header__content-item--active');
+  };
+
+  const activeDot = (n) => {
+    for(let dot of dots){
+      dot.classList.remove('header-btn--active');
+    }
+      dots[n].classList.add('header-btn--active');
+  };
+
+  const prepareCurrentSlide = (n) => {
+    activeSlide(n);
+    activeDot(n);
+  }
 
 
+  const nextSlide = () => {
+    if(index == items.length - 1){
+      index = 0;
+      prepareCurrentSlide(index);
+    } else {
+      index++;
+      prepareCurrentSlide(index);
+    }
+  };
 
-  btnNext.addEventListener('click', function(){
+  const prevSlide = () => {
+    if(index == 0){
+      index = items.length - 1;
+      prepareCurrentSlide(index);
+    } else {
+      index--;
+      prepareCurrentSlide(index);
+    }
+  };
 
 
-    position -= clientWidth;
+  dots.forEach((item, indexDot) => {
+    item.addEventListener('click', () => {
+      index = indexDot;
+      prepareCurrentSlide(index);
 
-    
-    track.style.left = `${position}px`;
-
-    console.log(position);
-    
+    });
   });
 
+  btnNext.addEventListener('click', nextSlide);
+  btnPrev.addEventListener('click', prevSlide);
 
 
-  btnPrev.addEventListener('click', function(){
 
-    
-    position += clientWidth;
-    
-    track.style.left = `${position}px`;
 
-    console.log(position);
 
-  });
 
-  console.log(position);
 
-}); 
+
+
+
+
+
+
+
+});

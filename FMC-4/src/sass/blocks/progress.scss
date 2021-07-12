@@ -18,7 +18,7 @@
   transform: translateY(25px);
 
   &:hover{
-    color: orange;
+    color: $main-color;
   }
 
   &:before{
@@ -51,11 +51,19 @@
 .scroll-up__svg-path {
   box-sizing: border-box;
   fill: none;
-  stroke: orange;
+  stroke: $main-color;
   stroke-width: 4px; 
   transition: all .25s ease-in;
 }
 
+
+@include xs-block(){
+  .scroll-up {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+  }
+}
 
 // PRELOADER
 
