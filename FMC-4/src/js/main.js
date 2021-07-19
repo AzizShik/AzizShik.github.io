@@ -238,13 +238,4 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 
 
 
-
-
-
-
-
-
-
-
-
 });
