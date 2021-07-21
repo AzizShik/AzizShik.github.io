@@ -8,11 +8,6 @@ window.onload = function(){
 };
 
 window.addEventListener('DOMContentLoaded', function(){
-  var selector = document.getElementsByClassName("phone-mask");
-
-var im = new Inputmask("(999)-999-99-99");
-im.mask(selector);
-
 
     const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
     const targets = document.querySelectorAll('[data-src]');
