@@ -180,6 +180,13 @@ const anchors = document.querySelectorAll('a[href*="#"]');
         btnPrev = document.querySelector('.arrow-prev'),
         btnNext = document.querySelector('.arrow-next');
 
+        // SLIDER 2
+
+        const desicionItems = document.querySelectorAll('.desicion__item'),
+              desicionNextBtn = document.querySelector('.desicion__arrow-next'),
+              desicionPrevBtn = document.querySelector('.desicion__arrow-prev'),
+              desicionDots = document.querySelectorAll('.desicion__dot');
+
   let index = 0;
 
   const activeSlide = (n) => {
@@ -187,6 +194,11 @@ const anchors = document.querySelectorAll('a[href*="#"]');
       item.classList.remove('header__content-item--active');
     }
     items[n].classList.add('header__content-item--active');
+
+    for(let desicionItem of desicionItems){
+      desicionItem.classList.remove('desicion__item--active');
+    }
+    desicionItems[n].classList.add('desicion__item--active');
   };
 
   const activeDot = (n) => {
@@ -194,31 +206,37 @@ const anchors = document.querySelectorAll('a[href*="#"]');
       dot.classList.remove('header-btn--active');
     }
       dots[n].classList.add('header-btn--active');
+
+      for(let desicionDot of desicionDots){
+        desicionDot.classList.remove('desicion__dot--active');
+      }
+      desicionDots[n].classList.add('desicion__dot--active');
   };
 
-  const prepareCurrentSlide = (n) => {
-    activeSlide(n);
-    activeDot(n);
-  }
+  
 
 
   const nextSlide = () => {
     if(index == items.length - 1){
       index = 0;
-      prepareCurrentSlide(index);
+      activeSlide(index);
+      activeDot(index);
     } else {
       index++;
-      prepareCurrentSlide(index);
+      activeSlide(index);
+      activeDot(index);
     }
   };
 
   const prevSlide = () => {
     if(index == 0){
       index = items.length - 1;
-      prepareCurrentSlide(index);
+      activeSlide(index);
+      activeDot(index);
     } else {
       index--;
-      prepareCurrentSlide(index);
+      activeSlide(index);
+      activeDot(index);
     }
   };
 
@@ -226,13 +244,23 @@ const anchors = document.querySelectorAll('a[href*="#"]');
   dots.forEach((item, indexDot) => {
     item.addEventListener('click', () => {
       index = indexDot;
-      prepareCurrentSlide(index);
-
+      activeSlide(indexDot);
+      activeDot(indexDot);
     });
   });
 
+  desicionDots.forEach((item, indexDot) => {
+    item.addEventListener('click', () => {
+      index = indexDot;
+      activeSlide(indexDot);
+      activeDot(indexDot);
+    });
+  })
+
   btnNext.addEventListener('click', nextSlide);
   btnPrev.addEventListener('click', prevSlide);
+  desicionNextBtn.addEventListener('click', nextSlide);
+  desicionPrevBtn.addEventListener('click', prevSlide);
 
 
 
