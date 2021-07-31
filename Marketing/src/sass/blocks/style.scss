@@ -2,6 +2,7 @@
 }
 .main {
   margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 .container {
 }
@@ -105,7 +106,6 @@
   &:before{
     background-image: url('../img/item1bg.png');
     z-index: -1;
-    top: -10px;
   }
   &:after{
     background-image: url('../img/item1.png');
@@ -176,39 +176,99 @@
 }
 .materials {
   max-width: 410px;
+  width: 100%;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+
+}
+.materials__top{
+  border-radius: 10px;
+  box-shadow: 0px 9px 43px 33px rgba(0,0,0,0.09);
+  padding: 40px;
 }
 .materials__applied {
 }
 .materials__title {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 25px;
 }
 .materials__block {
+  display: inline-block;
+  margin-bottom: 2rem;
+  max-width: 250px;
+  border-radius: 10px;
+  padding: 20px 30px;
+
+  transition: all .25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .materials__block-title {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .materials__block-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 5px;
 }
 .materials__articles {
 }
 .materials__articles-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 .materials__articles-nav {
 }
 .materials__articles-list {
 }
 .materials__articles-li {
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 30px;
+  border-bottom: 1px solid #e1e1e1;
+
+  transition: all .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 .materials__articles-link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 20px 30px;
+  display: inline-block;
 }
 .materials__social-nav {
+  margin-top: 4rem;
 }
 .materials__social-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
+  border-radius: 10px;
 }
 .materials__social-li {
+
+  &:first-child{
+    border-bottom: 1px solid #e1e1e1;
+  }
 }
 .materials__social-link {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  img{
+    width: 22px;
+    height: 22px;
+    margin-left: 12px;
+  }
 }
 .footer {
   background-color: #1c1b1b;

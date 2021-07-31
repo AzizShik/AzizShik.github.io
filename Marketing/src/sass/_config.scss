@@ -31,3 +31,15 @@ img{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+@media(hover: hover){
+  .materials__block:hover{
+    box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
+  }
+  .materials__articles-li:hover{
+    box-shadow: 0px 9px 43px 33px rgba(0,0,0,0.09);
+  }
+  .materials__social-link:hover{
+    box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
+  }
+}
