@@ -48,7 +48,7 @@ materialsArticlesLinks.forEach(item => {
     marketingBottomLi.forEach(item => {
       item.classList.add('marketing__bottom-li--active');
     });
-
+    document.querySelector('.marketing__bottom-nav').style.marginBottom = '0px';
 
 
   });
@@ -84,7 +84,7 @@ materialsTabClose.forEach(item => {
     marketingBottomLi.forEach(item => {
       item.classList.remove('marketing__bottom-li--active');
     });
-
+    document.querySelector('.marketing__bottom-nav').style.marginBottom = '30px';
 
 
   });
