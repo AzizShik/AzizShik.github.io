@@ -1,6 +1,9 @@
 $main: #fe3434;
 $second: #000;
 $text: #000;
+*{
+  box-sizing: border-box;
+}
 html{
   font-size: 10px;
   height: 100%;
@@ -27,7 +30,7 @@ img{
 }
 .container{
   max-width: 1170px;
-  width: 100%;
+  // width: 100%; Reme
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -42,4 +45,7 @@ img{
   .materials__social-link:hover{
     box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
   }
+  .marketing__bottom-li:hover {
+    box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
+  } 
 }
