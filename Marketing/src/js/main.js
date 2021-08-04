@@ -17,12 +17,49 @@ marketingTabLinks.forEach(item => {
   item.addEventListener('click', (e) => {
     let tab = e.target.getAttribute('data-tab');
     document.getElementById(tab).classList.add('marketing__tab--active');
+    marketing.classList.add('marketing--active');
+    materials.classList.add('materials--passive');
+
+
+    materialsTopTabs.forEach(item => {
+      item.classList.remove('materials__top-tab--active');
+    });
+
+    document.querySelector('.marketing__bottom-info').style.maxWidth = '100%';
+    document.querySelector('.marketing__top-img').style.marginLeft = '100px';
+    marketingTopInfo.classList.remove('marketing__top-info--active');
+    materials.classList.remove('materials--active');
+    marketing.classList.remove('marketing--passive');
+    marketingBottomList.style.justifyContent = 'start';
+
+
+    const linksText = [
+      'Заявки на покупку квартиры в ЖК',
+      'Заявки в бьюти-салон: М + Ж сегмент',
+      'Концепция сайта для стоматологии',
+      'Сайт для службы доставки пиццерии',
+    ];
+
+    marketingLinks[0].innerHTML = linksText[0];
+    marketingLinks[1].innerHTML = linksText[1];
+    marketingLinks[2].innerHTML = linksText[2];
+    marketingLinks[3].innerHTML = linksText[3];
+
+    marketingBottomLi.forEach(item => {
+      item.classList.remove('marketing__bottom-li--active');
+    });
+    document.querySelector('.marketing__bottom-nav').style.marginBottom = '30px';
+
+
+
+
+
 
     marketingClose.forEach(item => {
       item.addEventListener('click', () => {
         document.getElementById(tab).classList.remove('marketing__tab--active');
-
-        
+        marketing.classList.remove('marketing--active');
+        materials.classList.remove('materials--passive');
       });
     });
   });
@@ -43,12 +80,17 @@ materialsArticlesLinks.forEach(item => {
     const id = link.getAttribute('href').replace('#', '');
     document.getElementById(id).classList.add('materials__top-tab--active');
 
+    marketingTabs.forEach(item => {
+      item.classList.remove('marketing__tab--active');
+    });
+    marketing.classList.remove('marketing--active');
+    materials.classList.remove('materials--passive');
 
     document.querySelector('.marketing__bottom-info').style.maxWidth = '370px';
     document.querySelector('.marketing__top-img').style.marginLeft = '100px';
     marketingTopInfo.classList.add('marketing__top-info--active');
     materials.classList.add('materials--active');
-    marketing.classList.add('marketing--active');
+    marketing.classList.add('marketing--passive');
     marketingBottomList.style.justifyContent = 'center';
     marketingLinks.forEach(item => {
       item.innerHTML = '';
@@ -73,7 +115,7 @@ materialsTabClose.forEach(item => {
     document.querySelector('.marketing__top-img').style.marginLeft = '100px';
     marketingTopInfo.classList.remove('marketing__top-info--active');
     materials.classList.remove('materials--active');
-    marketing.classList.remove('marketing--active');
+    marketing.classList.remove('marketing--passive');
     marketingBottomList.style.justifyContent = 'start';
 
 

@@ -530,15 +530,30 @@
   visibility: visible;
 }
 
-.marketing--active{
+.marketing--passive{
   max-width: 450px;
 }
+
+.marketing--active{
+  max-width: 850px;
+}
+
+
 .marketing__bottom-li--active{
   max-width: 80px;
   &:after{
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
+  }
+  animation: items 1s ease forwards;
+}
+@keyframes items {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 .marketing__top-info--active{
@@ -556,6 +571,9 @@
 }
 .materials--active{
   max-width: 750px;
+}
+.materials--passive{
+  max-width: 300px;
 }
 
 .marketing__tab--active{

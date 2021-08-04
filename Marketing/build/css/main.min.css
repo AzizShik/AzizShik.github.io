@@ -825,12 +825,18 @@ img {
   visibility: visible;
 }
 
-.marketing--active {
+.marketing--passive {
   max-width: 450px;
+}
+
+.marketing--active {
+  max-width: 850px;
 }
 
 .marketing__bottom-li--active {
   max-width: 80px;
+  -webkit-animation: items 1s ease forwards;
+  animation: items 1s ease forwards;
 }
 
 .marketing__bottom-li--active:after {
@@ -839,6 +845,26 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   top: 50%;
+}
+
+@-webkit-keyframes items {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes items {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .marketing__top-info--active {
@@ -860,6 +886,10 @@ img {
 
 .materials--active {
   max-width: 750px;
+}
+
+.materials--passive {
+  max-width: 300px;
 }
 
 .marketing__tab--active {
