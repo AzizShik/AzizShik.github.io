@@ -12,7 +12,7 @@ https://azizshik.github.io/Glopt/build/</br>
 https://azizshik.github.io/FMC-4/build/ <br>
 https://azizshik.github.io/Parts/dist/<br>
 https://azizshik.github.io/Yoga/</br>
-https://azizshik.github.io/Repairs/dist/<br>
+https://azizshik.github.io/Repairs/buid/<br>
 https://azizshik.github.io/Wall/app/<br>
 https://azizshik.github.io/vr-box/dist/<br>
 https://azizshik.github.io/Pulse/dist/<br>
