@@ -1,6 +1,5 @@
 # Hi, my name is Abdyl-Aziz <br>
-## I'm learning web development. <br>
-## My last projects. <br>
+## I'm learning web development. My last projects: <br>
 https://azizshik.github.io/Marketing/build/ <br>
 https://azizshik.github.io/Irvas/build/index.html <br>
 https://azizshik.github.io/23Degree/build/ <br>
