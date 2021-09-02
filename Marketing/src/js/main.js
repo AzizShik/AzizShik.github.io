@@ -14,6 +14,10 @@ const materialsTabClose = document.querySelectorAll('.materials__tab-close');
 const marketingClose = document.querySelectorAll('.marketing__tab-close');
 const wrapper = document.querySelector('.wrapper');
 
+let videos = document.querySelectorAll('.marketing__tab-video');
+
+
+
 
 for (let i = 0; i < marketingLinks.length; i++) {
   let marketingLink = marketingLinks[i];
@@ -59,6 +63,7 @@ media1200px(media1200);
 
 marketingTabLinks.forEach(item => {
   item.addEventListener('click', (e) => {
+
     let tab = e.target.getAttribute('data-tab');
     document.getElementById(tab).classList.add('marketing__tab--active');
 
@@ -110,12 +115,6 @@ materialsArticlesLinks.forEach(item => {
     marketing.classList.remove('marketing--active');
     materials.classList.remove('materials--passive');
 
-
-
-
-
-
-
     if (wrapper.clientWidth > 1200) {
       document.querySelector('.marketing__bottom-info').style.maxWidth = '370px';
       marketingTopInfo.classList.add('marketing__top-info--active')
@@ -130,10 +129,7 @@ materialsArticlesLinks.forEach(item => {
         item.classList.add('marketing__bottom-li--active');
       });
       document.querySelector('.marketing__bottom-nav').style.marginBottom = '0px';
-
-
     }
-
 
 
   });
@@ -142,6 +138,7 @@ materialsArticlesLinks.forEach(item => {
 
 materialsTabClose.forEach(item => {
   item.addEventListener('click', () => {
+
 
     materialsTopTabs.forEach(item => {
       item.classList.remove('materials__top-tab--active');
@@ -159,6 +156,9 @@ materialsTabClose.forEach(item => {
     document.querySelector('.marketing__bottom-nav').style.marginBottom = '30px';
 
     linksTextCreator();
+
+
+
   });
 });
 
@@ -170,8 +170,6 @@ materialsTabClose.forEach(item => {
 
 
 function findVideos() {
-  let videos = document.querySelectorAll('.marketing__tab-video');
-
   for (let i = 0; i < videos.length; i++) {
     setupVideo(videos[i]);
   }
@@ -209,7 +207,7 @@ function createIframe(id) {
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
   iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__media');
+  iframe.classList.add('marketing__tab-media');
 
   return iframe;
 }

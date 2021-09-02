@@ -680,6 +680,23 @@
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    &:hover{
+      path {
+        fill: rgb(112, 80, 80);
+      }
+    }
+    margin-left: 20px;
+    width: 64px;
+    height: 64px;
+    path {
+      fill: #fff;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
