@@ -4398,6 +4398,7 @@ table {
 html {
   font-size: 10px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {

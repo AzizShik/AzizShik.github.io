@@ -1,3 +1,5 @@
+
+
 const marketing = document.querySelector('.marketing');
 const marketingTabs = document.querySelectorAll('.marketing__tab');
 const marketingTabLinks = document.querySelectorAll('.marketing__bottom-li');
