@@ -17,6 +17,15 @@ const wrapper = document.querySelector('.wrapper');
 let videos = document.querySelectorAll('.marketing__tab-video');
 
 
+const preloaderOverlay = document.querySelector('.preloader-overlay');
+
+document.body.classList.add('page-lock');
+
+window.addEventListener('load', () => {
+  preloaderOverlay.classList.add('preloader--hide');
+  document.body.classList.remove('page-lock');
+});
+
 
 
 for (let i = 0; i < marketingLinks.length; i++) {

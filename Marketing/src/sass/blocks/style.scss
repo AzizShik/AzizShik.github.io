@@ -740,7 +740,7 @@
 
 @media (max-width: 800px) {
   .footer__inner {
-    min-height: 120px;
+    min-height: 150px;
     text-align: center;
     align-items: start;
   }
@@ -765,6 +765,14 @@
     padding: 15px;
     padding-bottom: 0;
     padding-top: 25px;
+  }
+
+
+  .footer__author{
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 
