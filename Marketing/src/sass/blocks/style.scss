@@ -497,8 +497,6 @@
 
 .marketing__tab-content {
   overflow-y: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
   border-top: 1px solid #1e1e1e;
@@ -510,6 +508,71 @@
 }
 .marketing__tab-p {
 }
+.marketing__tab-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background: #000;
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+  }
+  .marketing__tab-media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+  }
+}
+
+.marketing__tab-media-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  width: 68px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  outline: transparent;
+}
+.marketing__tab-media-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+}
+.marketing__tab-media-icon {
+  fill: #ffffff;
+}
+
+.marketing__tab-video:hover .marketing__tab-media-shape,
+.marketing__tab-media-play:focus .marketing__tab-media-shape {
+  fill: #ff0000;
+  fill-opacity: 1;
+}
+
+.video--enabled {
+}
+
+.video--enabled .marketing__tab-media-play {
+  display: block;
+}
+
+
+
+
+
+
 .marketing__tab-footer {
   margin-left: 25px;
 }
@@ -532,10 +595,12 @@
 
 .marketing--passive {
   max-width: 450px;
+  margin-right: 10px;
 }
 
 .marketing--active {
   max-width: 850px;
+  margin-right: 10px;
 }
 
 .marketing__bottom-li--active {
@@ -647,6 +712,13 @@
   .materials__articles {
     margin-top: 2rem;
   }
+
+  .marketing--active {
+    margin-right: 0px;
+  }
+  .marketing--passive {
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -708,7 +780,7 @@
   .marketing__tab-info {
     flex-direction: column-reverse;
   }
-  .marketing__tab-close{
+  .marketing__tab-close {
     margin-top: 2rem;
   }
 
@@ -728,15 +800,18 @@
     padding-top: 20px;
   }
 
-
-  .materials__tab-info{
+  .materials__tab-info {
     flex-direction: column-reverse;
   }
-  .materials__tab-title{
+  .materials__tab-title {
     margin-left: 0;
     margin-bottom: 2rem;
   }
-  .materials__top-tab{
+  .materials__top-tab {
     padding-top: 2rem;
+  }
+  .marketing__top-info {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
