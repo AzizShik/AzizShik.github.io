@@ -4439,121 +4439,6 @@ img {
   margin: 0 auto;
 }
 
-.page-lock {
-  overflow: hidden;
-  padding-right: 15px;
-}
-
-.preloader-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1000;
-}
-
-.lds-facebook {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
-  box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.lds-facebook div {
-  display: inline-block;
-  -webkit-box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
-  box-shadow: 0px 0px 43px 33px rgba(0,0,0,0.09);
-  width: 32px;
-  background: #000;
-  border-radius: 10px;
-  border: 3px solid #7687c2;
-  -webkit-animation: lds-facebook 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  animation: lds-facebook 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-
-.lds-facebook div:not(:first-child) {
-  margin-left: 7px;
-}
-
-.lds-facebook div:nth-child(1) {
-  left: 8px;
-  -webkit-animation-delay: -0.4s;
-  animation-delay: -0.4s;
-}
-
-.lds-facebook div:nth-child(2) {
-  left: 32px;
-  -webkit-animation-delay: -0.2s;
-  animation-delay: -0.2s;
-}
-
-.lds-facebook div:nth-child(3) {
-  left: 56px;
-  -webkit-animation-delay: 0;
-  animation-delay: 0;
-}
-
-@-webkit-keyframes lds-facebook {
-  0% {
-    top: 8px;
-    height: 128px;
-    background: #966a6a;
-    border: 3px solid #0037ff;
-  }
-
-  50%, 100% {
-    top: 24px;
-    height: 64px;
-    background: #b80a0a;
-    border: 1px solid #001357;
-  }
-}
-
-@keyframes lds-facebook {
-  0% {
-    top: 8px;
-    height: 128px;
-    background: #966a6a;
-    border: 3px solid #0037ff;
-  }
-
-  50%, 100% {
-    top: 24px;
-    height: 64px;
-    background: #b80a0a;
-    border: 1px solid #001357;
-  }
-}
-
-.preloader--hide {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  transition: all .25s ease;
-}
-
 .main {
   margin-top: 3rem;
   margin-bottom: 5rem;
@@ -5459,12 +5344,6 @@ img {
 
   .marketing--passive {
     margin-right: 0px;
-  }
-}
-
-@media (max-width: 991px) {
-  .page-lock {
-    padding-right: 0px;
   }
 }
 
