@@ -4,7 +4,12 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const fileinclude = require('gulp-file-include');
 const webp = require('gulp-webp');
-const imagemin = require('gulp-imagemin');
+// const imagemin = require('gulp-imagemin');
+// const imageminPngquant = require('imagemin-pngquant');
+
+const tinypng = require('gulp-tinypng-compress');
+
+
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
@@ -28,12 +33,14 @@ function watch() {
   gulp.watch('./src/vendor/**/*.*', vendor)
   gulp.watch('./src/fonst/*.woff2', fonts)
   gulp.watch('./src/video/**/*.*', video)
-  gulp.watch('./src/images/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images);
+  gulp.watch('./src/images/**/*.{jpg,jpeg,png,webp,svg,gif}', {
+    usePolling: true
+  }, images);
 }
 
 function video() {
   return gulp.src('./src/video/**/*.*')
-  .pipe(gulp.dest('./build/video/'));
+    .pipe(gulp.dest('./build/video/'));
 }
 
 function clean() {
@@ -46,7 +53,9 @@ function html() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.stream());
 }
@@ -59,17 +68,33 @@ function fonts() {
 
 function images() {
   return gulp.src('./src/img/**/*.*')
-    .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 90, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 2 }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
-    ]))
+    // .pipe(imagemin([
+    //   imageminPngquant(),
+    //   imagemin.gifsicle({
+    //     interlaced: true
+    //   }),
+    //   imagemin.mozjpeg({
+    //     quality: 80,
+    //     progressive: true
+    //   }),
+    //   imagemin.optipng({
+    //     optimizationLevel: 1
+    //   }),
+    //   imagemin.svgo({
+    //     plugins: [{
+    //         removeViewBox: true
+    //       },
+    //       {
+    //         cleanupIDs: false
+    //       },
+    //     ]
+    //   })
+    // ]))
+    .pipe(tinypng({
+      key: 'kDQcHvzsCsjCH02LjsCnYGGMkB1t2JGQ',
+      sigFile: 'images/.tinypng-sigs',
+      log: true
+    }))
     .pipe(gulp.dest('./build/img'))
     .pipe(browserSync.stream());
 }
@@ -79,7 +104,7 @@ function imageToWebp(done) {
     .pipe(webp())
     .pipe(gulp.dest('./build/img'))
     .pipe(browserSync.stream())
-  done();
+    done();
 }
 
 function vendor(done) {
@@ -96,9 +121,16 @@ function vendor(done) {
 function styles() {
   return gulp.src('./src/sass/main.scss')
     .pipe(gcmq())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-    .pipe(rename({ suffix: ".min" }))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+    }))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 }
@@ -106,7 +138,9 @@ function styles() {
 function scripts() {
   return gulp.src('./src/js/*.js')
     .pipe(uglify())
-    .pipe(rename({ suffix: ".min" }))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest('./build/js/'))
     .pipe(browserSync.stream());
 }
@@ -120,17 +154,23 @@ gulp.task('dev', dev);
 
 
 var settings = {
-  outputStyle: 'scss', /* less || scss || sass || styl */
-  columns: 12, /* number of grid columns */
-  offset: '30px', /* gutter width px || % || rem */
-  mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
+  outputStyle: 'scss',
+  /* less || scss || sass || styl */
+  columns: 12,
+  /* number of grid columns */
+  offset: '30px',
+  /* gutter width px || % || rem */
+  mobileFirst: false,
+  /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
-    maxWidth: '1200px', /* max-width оn very large screen */
+    maxWidth: '1200px',
+    /* max-width оn very large screen */
     fields: '30px' /* side fields */
   },
   breakPoints: {
     lg: {
-      width: '1100px', /* -> @media (max-width: 1100px) */
+      width: '1100px',
+      /* -> @media (max-width: 1100px) */
     },
     md: {
       width: '960px'
