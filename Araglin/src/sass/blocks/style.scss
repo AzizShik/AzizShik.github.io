@@ -459,7 +459,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .compound__info-img {
@@ -485,18 +485,18 @@ a {
   position: relative;
   transition: all 0.25s ease;
   &:before {
-    content: '';
-    transition: all .25s ease;
+    content: "";
+    transition: all 0.25s ease;
     position: absolute;
     bottom: 0;
     width: 100%;
     left: 0;
     height: 25px;
-    background: rgba(#fff,  0.8);
+    background: rgba(#fff, 0.8);
   }
 }
 
-.wrapper-active .compound__info-wrapper{
+.wrapper-active .compound__info-wrapper {
   max-height: 100%;
   overflow: visible;
   opacity: 1;
@@ -533,12 +533,49 @@ a {
     width: 32px;
     height: 32px;
     path {
-      transition: all .25s ease;
+      transition: all 0.25s ease;
     }
   }
 }
 
-
 .compound__btn--active {
   transform: scale(-1);
+}
+
+.why {
+}
+.section {
+}
+.container {
+}
+.why__title {
+}
+.title {
+}
+.title__count {
+}
+.why__inner {
+  margin-top: 10rem;
+  @include row-flex();
+}
+.why__item {
+  text-align: center;
+  @include col();
+  @include size(4);
+  @include size-md(4);
+  @include size-xs(4);
+  margin-bottom: 10rem;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+}
+.why__item-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4rem;
+
+}
+.why__item-text {
+  max-width: 320px;
+  margin: 0 auto;
 }
