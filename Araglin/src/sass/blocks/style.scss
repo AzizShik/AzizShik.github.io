@@ -1,0 +1,465 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul li,
+menu li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+legend {
+  color: #000;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header__nav {
+  padding-top: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+}
+.header__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header__li {
+}
+.header__link {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $headerLink;
+}
+
+.header__link--active {
+  color: $headerLinkActive;
+}
+
+.araglin {
+  background-color: $second;
+  background-image: url("../img/gradient.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 48%;
+  padding-top: 112px;
+  padding-bottom: 90px;
+}
+
+.araglin__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.araglin__info {
+  margin-top: 132px;
+}
+
+.araglin__title {
+  font-size: 78px;
+  line-height: 78px;
+  font-weight: 700;
+  color: $text;
+  span {
+    color: $main;
+  }
+}
+
+.araglin__descr {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 400;
+  color: #777777;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 61px;
+    background: #ed1c24;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+  }
+}
+
+.araglin__instr {
+  margin-top: 104px;
+  opacity: 0.87;
+  box-shadow: 10px 18px 21px 0px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #999999;
+  padding: 28px 453px 28px 28px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  top: 0;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.araglin__box {
+  &::after {
+    bottom: 0px;
+    left: -183px;
+    z-index: 10;
+  }
+
+  &::before {
+    top: 0;
+    right: 34px;
+  }
+}
+
+.araglin__img {
+}
+
+.araglin__illness {
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
+  color: #eb1c23;
+}
+
+.araglin__illness-div {
+}
+
+.araglin__illness-letter {
+}
+
+.preparation {
+}
+.section {
+}
+.container {
+}
+.preparation__title {
+}
+.title {
+}
+.title__count {
+}
+.preparation__inner {
+  margin-top: 105px;
+  @include row-flex();
+}
+.preparation__item {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(12);
+
+  text-align: center;
+
+  .defent-descr {
+    max-width: 300px;
+  }
+}
+
+.preparation__item-img {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.preparation__item-title {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+.preparation__item-descr {
+  font-weight: 400;
+  text-transform: none;
+  text-align: center;
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+/////////////////////////
+
+.recom {
+  background: linear-gradient(
+    90deg,
+    rgb(246, 246, 246) 50%,
+    rgb(255, 255, 255) 50%
+  );
+  position: relative;
+}
+
+.big-letter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.recom__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 85px;
+}
+.recom__item-block {
+}
+.recom__item {
+  max-width: 550px;
+  width: 100%;
+  margin-bottom: 130px;
+
+  position: relative;
+  z-index: 10;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    z-index: -1;
+    width: 311px;
+    height: 270px;
+    background-color: blue;
+
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+}
+
+.recom__item--white {
+  &:before {
+    background: #fff;
+  }
+}
+
+.recom__item--grey {
+  &:before {
+    background: $second;
+  }
+}
+
+.recom__item-count {
+  position: relative;
+  z-index: 10;
+  display: block;
+  font-family: Manrope;
+  font-size: 95px;
+  line-height: 75px;
+  font-weight: 700;
+  color: #ee1c24;
+  opacity: 0.5;
+}
+.recom__item-title {
+  margin-left: 50px;
+  font-size: 20px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #ee1c24;
+}
+.recom__item-descr {
+  margin-left: 50px;
+  max-width: 455px;
+  min-height: 150px;
+
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  font-weight: 400;
+
+  .araglin-d {
+    font-weight: 700;
+  }
+}
+
+.compound {
+  background-color: #fff;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/gradient.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  .container {
+    position: relative;
+    z-index: 100;
+  }
+}
+.section {
+}
+
+.compound__title {
+}
+.title {
+}
+.title__count {
+}
+.compound__inner {
+  margin-top: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  .pill-box {
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: 4px 7px 21px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .pill-box {
+    align-self: flex-start;
+    justify-content: flex-start;
+    max-width: 615px;
+    width: 100%;
+    min-height: 540px;
+
+    &::after {
+      top: 0;
+      right: -147px;
+      width: 148px;
+      height: 128px;
+      z-index: 10;
+    }
+  }
+}
+
+.compound__info {
+  width: 50%;
+  margin-left: 30px;
+}
+.compound__info-title {
+  background: #fff;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #eb1c23;
+  box-shadow: 10px 18px 21px 0px rgba(0, 0, 0, 0.2);
+  padding: 24px 100px;
+  border-radius: 50px;
+  margin-bottom: 100px;
+
+  position: relative;
+  z-index: 100;
+}
+.compound__info-inner {
+}
+.compound__info-item {
+}
+.compound__info-img {
+}
+.compound__info-img-span {
+}
+.compound__text {
+}
+.compound__btn {
+}
