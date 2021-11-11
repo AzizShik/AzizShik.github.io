@@ -143,7 +143,6 @@ body {
   }
 }
 
-
 .pill-box {
   background: #fff;
   max-width: 656px;
@@ -178,7 +177,6 @@ body {
     z-index: 10;
   }
   &-img {
-
   }
 }
 
@@ -214,4 +212,19 @@ body {
 }
 
 @media (hover: hover) {
+  .compound__btn:hover {
+    svg {
+      path {
+        fill: red;
+      }
+    }
+  }
+  .compound__btn:active {
+    svg {
+      transform: scale(0.95) translate(1px, 1px);
+      path {
+        fill: red;
+      }
+    }
+  }
 }
