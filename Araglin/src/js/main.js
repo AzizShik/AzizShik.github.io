@@ -23,3 +23,24 @@ compountBtns.forEach(item => {
 
   });
 });
+
+
+
+const articlesLinks = document.querySelectorAll('.articles__item-link');
+const articlesText = document.querySelectorAll('.articles__item-text');
+
+articlesLinks.forEach(item => {
+
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (item.parentNode.classList.contains('articles__item-active')) {
+      item.parentNode.classList.remove('articles__item-active');
+    } else {
+      articlesText.forEach(item => {
+        item.parentNode.classList.remove('articles__item-active');
+      });
+      item.parentNode.classList.add('articles__item-active');
+    }
+  });
+
+});

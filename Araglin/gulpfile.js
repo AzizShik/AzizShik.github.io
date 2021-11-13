@@ -145,7 +145,7 @@ var settings = {
   mobileFirst: false,
   /* mobileFirst ? 'min-width' : 'max-width' */
   container: {
-    maxWidth: '1200px',
+    maxWidth: '1260px',
     /* max-width оn very large screen */
     fields: '30px' /* side fields */
   },

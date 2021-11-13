@@ -7,9 +7,6 @@ $second: #f6f6f6;
 $headerLink: #ffbcbc;
 $headerLinkActive: #ed1c24;
 
-$btn: blue;
-$btnHover: yellow;
-
 $linkHover: rgb(187, 158, 158);
 
 $text: #000;
@@ -225,6 +222,27 @@ body {
       path {
         fill: red;
       }
+    }
+  }
+  .articles__item-link:hover {
+    color: #000;
+  }
+
+  .header__link:hover {
+    color: $headerLinkActive;
+  }
+
+  .araglin__instr:hover {
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer__contacts-item-link:hover {
+    color: $headerLink;
+  }
+
+  .footer__link-item:hover {
+    a {
+      color: $headerLink;
     }
   }
 }
