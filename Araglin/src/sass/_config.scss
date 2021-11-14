@@ -173,8 +173,6 @@ body {
     background: #ee1c24;
     z-index: 10;
   }
-  &-img {
-  }
 }
 
 .illness-block {
@@ -202,7 +200,7 @@ body {
   overflow-y: hidden;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 1200px) {
   .page-lock {
     padding-right: 15px;
   }
