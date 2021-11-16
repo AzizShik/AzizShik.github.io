@@ -73,3 +73,6 @@ headerLinks.forEach(item => {
 
 
 
+AOS.init({
+  once: false, 
+});
