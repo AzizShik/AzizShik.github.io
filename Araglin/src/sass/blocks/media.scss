@@ -1,3 +1,45 @@
+@media (max-width: 1400px) {
+  .important-info:after {
+    left: 0px;
+    top: -50px;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1300px) {
+  .compound__inner .pill-box::after {
+    display: none;
+  }
+  .compound__info-title {
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .compound__inner .pill-box {
+    max-width: 600px;
+  }
+  .clinic__photo:before {
+    display: none;
+  }
+
+  .clinic {
+    background-size: 50% 44%;
+  }
+  .clinic__inner {
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .clinic__photo {
+    width: 50%;
+    right: -2px;
+    flex-shrink: 0;
+  }
+
+  .clinic__info {
+    margin-left: 10px;
+  }
+}
+
 @media (max-width: 1200px) {
   .araglin {
     background-size: 50% 100%;
@@ -35,11 +77,105 @@
 
   .important-info {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
+    &:after {
+      width: 44px;
+      height: 32px;
+      top: -30px;
+    }
+  }
+
+  .compound::after {
+    display: none;
+  }
+
+  .compound {
+    background: #fff;
+  }
+  .compound__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .compound__info-item {
+    justify-content: center;
+  }
+
+  .compound__inner .illness-block {
+    left: 40px;
+    bottom: 30px;
+    color: #000;
+    min-height: auto;
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .illness-letter {
+      display: inline-block;
+    }
+
+    .illness-block-div {
+      display: inline-block;
+    }
+  }
+
+  .compound__inner .pill-box:before {
+    top: 0;
+    left: 32px;
+  }
+
+  .indication__inner {
+    flex-wrap: wrap;
+  }
+
+  .indication__method-card {
+    background: #ddd;
+    max-width: none;
+  }
+
+  .indication__method-title {
+    text-align: center;
+  }
+
+  .indication__info-title {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .indication__method {
+    max-width: none;
+    text-align: center;
+  }
+
+  .indication__method-dose {
+    margin-bottom: 25px;
+  }
+
+  .indication__info {
+    max-width: none;
+  }
+
+  .indication__info-block {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .indication__inner {
+    margin-top: 5rem;
   }
 }
 
 @media (max-width: 991px) {
+  .section {
+    padding-top: 5.5rem;
+    padding-bottom: 6.5rem;
+  }
+
+  .why {
+    padding-bottom: 0;
+  }
+
   .header {
     display: block;
   }
@@ -96,6 +232,73 @@
   .header__burger {
     display: block;
   }
+
+  .important-info {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .recom__inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .recom__item {
+    max-width: 100%;
+    margin-bottom: 10rem;
+  }
+
+  .recom__item:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .recom__item-descr {
+    margin-left: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .recom__item-block {
+    text-align: center;
+  }
+
+  .recom__item-title {
+    margin-left: 0;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .important-info {
+    margin-top: 5rem;
+  }
+
+  .indication__info-list {
+    margin-left: 0;
+  }
+
+  .clinic {
+    background-image: none;
+  }
+
+  .clinic__inner {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .clinic__info-bullet {
+    flex-direction: column;
+  }
+  .clinic__info-text {
+    margin-top: 2rem;
+  }
+  .clinic__info-bullet-text {
+    margin-left: 0;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 991px) {
@@ -110,9 +313,102 @@
   left: 0%;
 }
 
+@media (max-width: 960px) {
+  .preparation__inner {
+    justify-content: center;
+  }
+
+  .compound__inner .illness-block {
+    left: 30px;
+    padding-right: 0;
+    width: 85%;
+  }
+
+  .compound__info-title {
+    font-size: 20px;
+  }
+
+  .clinic__photo {
+    flex-grow: 1;
+    width: 100%;
+    right: 0;
+    text-align: center;
+  }
+
+  .clinic .important-info {
+    margin-top: 5rem;
+  }
+
+  .clinic__advantages {
+    margin-top: 8.5rem;
+  }
+
+  .clinic__advantages-inner {
+    justify-content: center;
+  }
+
+  .clinic__advantages-item {
+    margin-bottom: 3rem;
+  }
+
+
+
+
+  .articles__inner {
+    justify-content: center;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .articles__item-title {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .articles__item-text {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .articles__item-text {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .articles__item-link {
+    max-width: none;
+    font-size: 16px;
+    .link-arrow {
+      margin-left: 10px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+
+
+
+  .footer__contacts-inner {
+    flex-direction: column;
+  }
+  .footer__contacts-item {
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 676px) {
   html {
     font-size: 8px;
+  }
+
+  .section {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
   }
 
   .header__nav {
@@ -160,9 +456,105 @@
   .araglin__info {
     margin-top: 100px;
   }
+
+  .important-info {
+    font-size: 20px;
+  }
+
+  .title {
+    line-height: 1.5;
+    .title__count {
+      display: block;
+    }
+  }
+
+  .clinic__advantages-item {
+    font-size: 16px;
+  }
+
+  .clinic__advantages-title {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 560px) {
+  .preparation__item {
+    margin-bottom: 20px;
+  }
+
+  .compound__title {
+    font-size: 16px;
+  }
+
+  .compound__text {
+    font-size: 16px;
+  }
+
+  .compound__info-item {
+    flex-wrap: wrap;
+  }
+
+  .compound__info-block {
+    margin-left: 0;
+  }
+
+  .compound__info {
+    margin-left: 0;
+  }
+
+  .compound__info-img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pill-box-img {
+    padding-right: 15px;
+  }
+
+  .compound__inner .pill-box {
+    min-height: 400px;
+  }
+
+  .indication__info-block {
+    margin-top: 20px;
+  }
+
+  .indication__info-li {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .indication__info-li-text {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .indication__method-card img {
+    margin-left: 0;
+  }
+
+  .indication__method-card {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  .articles__item-title {
+    font-size: 18px;
+  }
+  .articles__item-text {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .illness-block {
     left: 20px;
     bottom: 10px;
@@ -214,6 +606,15 @@
     width: 100%;
     height: 3px;
   }
+
+  .important-info:after {
+    height: 24px;
+    width: 32px;
+  }
+
+  .compound__info-title {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -237,5 +638,26 @@
       width: 32px;
       height: 32px;
     }
+  }
+
+  .important-info {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .compound__inner .pill-box {
+    min-height: 300px;
+  }
+
+  .compound__inner .illness-block .illness-letter {
+    font-size: 12px;
+  }
+
+  .compound__info-title {
+    font-size: 16px;
+  }
+
+  .why__title {
+    font-size: 17px;
   }
 }

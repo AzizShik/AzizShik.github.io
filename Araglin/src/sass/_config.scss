@@ -105,10 +105,13 @@ body {
 .important-info {
   position: relative;
   z-index: 100;
-  max-width: 1089px;
-  margin: 0 auto;
+  max-width: none;
+  text-align: center;
 
+  margin: 0 auto;
   margin-top: 12.5rem;
+
+  
   font-size: 22px;
   line-height: 31px;
   font-weight: 700;
@@ -119,7 +122,8 @@ body {
     content: "";
     position: absolute;
     bottom: -13px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 1045px;
     width: 100%;
     height: 5px;
@@ -127,13 +131,13 @@ body {
   }
 
   &:after {
-    left: -100px;
+    left: -65px;
     top: 50%;
     transform: translateY(-50%);
     content: "";
     position: absolute;
-    width: 62px;
-    height: 53px;
+    width: 60px;
+    height: 50px;
     background: $main;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
