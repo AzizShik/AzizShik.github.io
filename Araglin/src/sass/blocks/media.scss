@@ -405,6 +405,10 @@
     padding-bottom: 5.5rem;
   }
 
+  .container {
+    padding: 0 10px;
+  }
+
   .header__nav {
     width: 75%;
   }
@@ -469,6 +473,8 @@
   .clinic__advantages-title {
     font-size: 19px;
   }
+
+
 }
 
 @media (max-width: 560px) {
