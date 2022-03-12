@@ -3,13 +3,13 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const fileinclude = require('gulp-file-include');
-// const imagemin = require('gulp-imagemin');
-const tinypng = require('gulp-tinypng-compress');
+const imagemin = require('gulp-imagemin');
+// const tinypng = require('gulp-tinypng-compress');
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const htmlmin = require('gulp-htmlmin');
-const gcmq = require('gulp-group-css-media-queries');
+// const gcmq = require('gulp-group-css-media-queries');
 const smartgrid = require('smart-grid');
 const webp = require('gulp-webp');
 
@@ -57,22 +57,22 @@ function fonts() {
 
 function images() {
   return gulp.src('./src/img/**/*.*')
-    // .pipe(imagemin([
-    //   imagemin.gifsicle({ interlaced: true }),
-    //   imagemin.mozjpeg({ quality: 75, progressive: true }),
-    //   imagemin.optipng({ optimizationLevel: 2 }),
-    //   imagemin.svgo({
-    //     plugins: [
-    //       { removeViewBox: true },
-    //       { cleanupIDs: false }
-    //     ]
-    //   })
-    // ]))
-    .pipe(tinypng({
-      key: 'kDQcHvzsCsjCH02LjsCnYGGMkB1t2JGQ',
-      sigFile: 'images/.tinypng-sigs',
-      log: true
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 2 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ]))
+    // .pipe(tinypng({
+    //   key: 'kDQcHvzsCsjCH02LjsCnYGGMkB1t2JGQ',
+    //   sigFile: 'images/.tinypng-sigs',
+    //   log: true
+    // }))
     .pipe(gulp.dest('./build/img'))
     .pipe(browserSync.stream());
 }
@@ -98,7 +98,7 @@ function vendor(done) {
 
 function styles(done) {
   return gulp.src('./src/sass/main.scss')
-    .pipe(gcmq())
+    // .pipe(gcmq())
 
     .pipe(sass({
       outputStyle: 'compressed'
