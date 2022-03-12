@@ -196,15 +196,13 @@
     height: 100%;
     transition: all 0.4s ease;
 
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .header__ul {
     flex-wrap: wrap;
     text-align: center;
     min-height: 500px;
-
-    overflow-y: scroll;
   }
 
   .header__li {
@@ -411,6 +409,7 @@
 
   .header__nav {
     width: 75%;
+    height: 105%;
   }
 
   .header__burger {
@@ -617,6 +616,13 @@
 }
 
 @media (max-width: 400px) {
+
+  .header__nav {
+    width: 75%;
+    height: 115%;
+  }
+
+
   .pill-box {
     min-height: 300px;
   }

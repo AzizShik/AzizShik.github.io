@@ -74,5 +74,6 @@ headerLinks.forEach(item => {
 
 
 AOS.init({
-  once: false, 
+  once: true,
+  mirror: true, 
 });
